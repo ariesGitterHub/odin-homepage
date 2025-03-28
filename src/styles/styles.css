@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: "Showcard Gothic";
+  src: url("../assets/SHOWG.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ***** TABLE OF CONTENTS *********************************** */
+
+/* ROOT/SHARED/GLOBAL */
+/* BTN CONTROLS */
+/* HEADER */
+/* --> TITLE */
+/* --> GIF */
+/* MESSAGES */
+/* MAIN BTN CONTAINER */
+/* ALL THE VARIOUS BOARDS/ZONES/GRIDS */
+/* --> FULL-BOARDS */
+/* ----> PLAYER NUMBER TEXT */
+/* ----> PLACE SHIPS, DEPLOYMENT ZONE & TARGET ZONE */
+/* SPECIAL HOVER EFFECTS (for deployment and target zones) */
+/* MEDIA QUERIES */
+
+/* NOTE: USE <CTRL-F Key Item>, to find CSS that maintains the grids */
+
+/* ***** TABLE OF CONTENTS *********************************** */
+
+/* ROOT/SHARED/GLOBAL */
+:root {
+  /* Colors */
+  --circle-red: #cc3333;
+    --wrapper-red: #8b1818;
+    --bottom-red: #292222;
+  --wrapper-pink: #e57676;
+  --explosion-gold: #ffd700;
+    --mug-blue: #898d9B;
+  --shadow-blue: #666A77;
+  --hoodie-blue: #484662;
+  --bottom-blue: #1c1d1e;
+  --desk-brown: #4d4a47;
+  --standard-black: #000000;
+  /* --standard-black-trans: #00000088; */
+  --standard-white: #ffffff;
+  --computer-grey: #808080;
+  --muffin-brown: #563f3f;
+  --nut-brown: #a38686;
+
+
+
+  --box-shadow: 0 5px 10px var(--standard-black);
+  --background-main: linear-gradient(
+    var(--linear-gradient-deg),
+    var(--muffin-brown),
+    var(--desk-brown)
+  );
+    --background-btn-hover: linear-gradient(
+    var(--linear-gradient-deg),
+    var(--standard-black),
+    var(--mug-blue)
+  );
+      --background-btn-active: linear-gradient(
+    var(--linear-gradient-deg),
+    var(--standard-black),
+    var(--circle-red)
+  );
+
+  --font-title: "Showcard Gothic", sans-serif;
+  --font-text: "Montserrat", sans-serif;
+
+  --width-master: 90vw;
+  --linear-gradient-deg: 5deg;
+  --scale-big: 1.25;
+  --scale-small: 0.9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  /* Below, reduces base font size for mobile, a convenient way to backdoor size changes easily, reduce for mobile views */
+  font-size: 14px;
+  /* Improves text readability for mobile */
+  line-height: 1.25;
+
+}
+
+/* HEADER */
+header {
+height: fit-content;
+width: 100%;
+}
+
+#header-item-container {
+height: fit-content;
+width: fit-content;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+background-color: var(--standard-black);
+padding: .25rem;
+/* background-color: darkred; */
+}
+
+#title-text {
+  color: var(--mug-blue);  
+  font-family: var(--font-title);
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+#header-content-container {
+height: fit-content;
+width: 100vw;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+/* background-color: var(--standard-black); */
+background-color: var(--standard-white);
+/* border-radius: 50%; */
+}
+
+.img-big {
+  height: auto;
+  width: 30rem;
+  margin: .25rem 1rem 0 1rem;
+  /* transform: translateX(5rem);
+  transform: translateY(.25rem); */
+}
+
+#header-btn-container {
+/* height: fit-content;
+width: fit-content; */
+display: flex;
+flex-direction: row;
+gap: 1.75rem;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+/* background-color: #87cfeb70; */
+/* transform: translateY(-3.5rem); */
+/* transform: translateX(-5rem); */
+}
+
+button {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  /* background: var(--background-btn); */
+  background: none;
+  /* border: var(--mug-blue) solid 1rem;         */
+    border: var(--standard-black) solid .25rem; 
+
+  border-radius: 50%;
+  /* border-radius: 1rem; */
+  font-family: var(--font-title);
+  /* margin: 1rem; */
+   padding: .25rem;
+  
+}
+
+button:hover {
+  /* background: var(--background-btn-hover); */
+    background: var(--background-btn-hover);
+  border-color: var(--explosion-gold);
+  transform: scale(var(--scale-big));
+  /* transform: rotate(-45deg); */
+}
+
+button:active {
+  /* background: none; */
+   background: var(--background-btn-active);
+  transform: scale(var(--scale-small));
+  /* border-color: var(--circle-red); */
+  /* transform: rotate(-90deg); */
+}
+
+/* #btn-muffin {
+  display: none;
+} */
+/* #btn-mug {
+  display: none;
+} */
+/* #btn-phone {
+  display: none;
+} */
+
+#img-mug {
+  /* height: auto;
+  width: 5rem; */
+/* transform: translateX(.125rem); */
+}
+
+/* #img-phone {
+transform: rotate(45deg);
+} */
+
+.img-small {
+  height: auto;
+  width: 7rem;
+  margin: .25rem
+}
+#img-muffin:hover {
+   transform: rotate(17deg);
+}
+#img-mug:hover {
+  /* transform: translateX(.75rem); */
+   transform: rotate(-8deg) translateY(-.85rem);
+     /* transform: translateY(-.85rem); */
+}
+#img-phone:hover {
+   transform: rotate(45deg);
+}
+
+/* #img-muffin {
+  height: auto;
+  width: 5rem;
+} */
+
+
+/* MAIN */
+main {
+
+}
+
+/* FOOTER */
+footer {
+
+}
