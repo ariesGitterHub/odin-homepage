@@ -58,7 +58,7 @@
     --background-btn-hover: linear-gradient(
     var(--linear-gradient-deg),
     var(--standard-black),
-    var(--mug-blue)
+    var(--hoodie-blue)
   );
       --background-btn-active: linear-gradient(
     var(--linear-gradient-deg),
@@ -115,6 +115,7 @@ padding: .25rem;
   font-family: var(--font-title);
   font-size: 2rem;
   padding-top: 1rem;
+  text-decoration: underline .25rem;
 }
 
 #header-content-container {
@@ -124,18 +125,61 @@ display: flex;
 flex-wrap: wrap;
 align-items: center;
 justify-content: center;
-/* background-color: var(--standard-black); */
-background-color: var(--standard-white);
+background-color: var(--standard-black);
+/* background-color: var(--standard-white); */
 /* border-radius: 50%; */
+/* padding: 1rem; */
+}
+
+
+
+#content-text-div{
+height: 22rem;
+width: 22rem;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+background-color: var(--hoodie-blue);
+border-radius: 50%;
+margin: 1rem;
+padding: .5rem;
 }
 
 .img-big {
   height: auto;
-  width: 30rem;
+  width: 22rem;
+  display: block;
   margin: .25rem 1rem 0 1rem;
-  /* transform: translateX(5rem);
-  transform: translateY(.25rem); */
+   transform: translateX(-1rem) translateY(.375rem);
 }
+
+
+/* Starts as display: none */
+#content-text-title {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--explosion-gold);
+  font-family: var(--font-title);
+  font-size: 2rem;
+}
+
+/* Starts as display: none */
+#content-text {
+display: none;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: center;
+justify-content: left;
+  color: var(--explosion-gold);
+  font-family: var(--font-text);
+  font-size: 1rem;
+  margin: .25rem 1rem 1rem 1rem;
+  padding: 1rem;
+}
+
 
 #header-btn-container {
 /* height: fit-content;
@@ -186,9 +230,10 @@ button:active {
   /* transform: rotate(-90deg); */
 }
 
-/* #btn-muffin {
+/* Starts as display: none */
+#btn-muffin {
   display: none;
-} */
+}
 /* #btn-mug {
   display: none;
 } */
@@ -211,17 +256,17 @@ transform: rotate(45deg);
   width: 7rem;
   margin: .25rem
 }
-#img-muffin:hover {
+#img-muffin {
    transform: rotate(17deg);
 }
-#img-mug:hover {
+#img-mug {
   /* transform: translateX(.75rem); */
    transform: rotate(-8deg) translateY(-.85rem);
      /* transform: translateY(-.85rem); */
 }
-#img-phone:hover {
+/* #img-phone {
    transform: rotate(45deg);
-}
+} */
 
 /* #img-muffin {
   height: auto;

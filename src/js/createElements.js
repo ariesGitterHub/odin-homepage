@@ -13,22 +13,43 @@ export function createHeader() {
     id: "header-item-container",
   });
 
-    const headerContentContainer = createElement("div", {
-      id: "header-content-container",
-    });
+  const headerContentContainer = createElement("div", {
+    id: "header-content-container",
+  });
 
-        const headerBtnContainer = createElement("div", {
-          id: "header-btn-container",
-        });
+  const headerBtnContainer = createElement("div", {
+    id: "header-btn-container",
+  });
 
   const titleText = createElement(
     "h1",
     {
       id: "title-text",
-      class: "text",
+      class: "special-text",
     },
     "The Mad Muffin Man"
   );
+
+  const contentTextDiv = createElement(
+    "div",
+    {
+      id: "content-text-div",
+    //   class: "",
+    });
+
+    const contentTextTitle = createElement(
+      "h2",
+      {
+        id: "content-text-title",
+        class: "special-text",
+      });
+
+        const contentText = createElement(
+          "p",
+          {
+            id: "content-text",
+            class: "normal-text",
+          });
 
   const btnMuffin = createElement("button", {
     id: "btn-muffin",
@@ -94,16 +115,16 @@ export function createHeader() {
     headerBtnContainer
   );
 
-  headerContentContainer.append(
-    imgFullMMM
-  );
+  headerContentContainer.append(contentTextDiv);
 
-    headerBtnContainer.append(
-      btnMuffin,
-      btnMug,
-      btnPhone
-      // btnClear
-    );
+  contentTextDiv.append(imgFullMMM, contentTextTitle, contentText);
+  
+  headerBtnContainer.append(
+    btnMuffin,
+    btnMug,
+    btnPhone
+    // btnClear
+  );
 
   btnMuffin.append(imgMuffin);
   btnMug.append(imgMug);
