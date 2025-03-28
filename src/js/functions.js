@@ -51,7 +51,7 @@ export function handleTextContent() {
     addMessage(contentTextTitle, "ABOUT ME");
     addMessage(
       contentText,
-      "Hi, I'm a giant muffin headed abomination who enjoys the challenge of learning to code. The Odin Project has been the best course I've taken thus far. Below you will find many of the projects that I've had the pleasure of creating while on my coding journey. Enjoy!"
+      "Hi, I'm a giant muffin-headed abomination who enjoys the challenge of learning to code. The Odin Project has been the best course I've taken thus far. Below you will find many of the projects that I've had the pleasure of creating while on my coding journey. Enjoy!"
     );
   } else if (
     btnMuffin.style.display !== "none" &&
