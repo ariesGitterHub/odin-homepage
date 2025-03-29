@@ -21,12 +21,12 @@ export function flexHideIt(elements) {
 }
 
 export function handleBtnClicks() {
-    const { imgFullMMM, contentTextTitle, contentText, btnMuffin } = getElements();
+    const { imgFullMMM, contentTextDiv, btnMuffin } = getElements();
     if (btnMuffin.style.display !== "none") {
       flexHideIt([imgFullMMM]);
-      flexShowIt([contentTextTitle, contentText]);
+      flexShowIt([contentTextDiv]);
     } else if (btnMuffin.style.display === "none") {
-      flexHideIt([contentTextTitle, contentText]);
+      flexHideIt([contentTextDiv]);
       flexShowIt([imgFullMMM]);
     }
 }
@@ -42,7 +42,7 @@ function clearMessage() {
 }
 
 export function handleTextContent() {
-  const { imgFullMMM, contentTextTitle, contentText, btnMuffin, btnMug, btnPhone } = getElements();
+  const { contentTextTitle, contentText, btnMuffin, btnMug, btnPhone } = getElements();
   if (
     btnMuffin.style.display !== "none" &&
     btnMug.style.display === "none" &&
@@ -51,15 +51,17 @@ export function handleTextContent() {
     addMessage(contentTextTitle, "ABOUT ME");
     addMessage(
       contentText,
-      "Hi, I'm a giant muffin-headed abomination who enjoys the challenge of learning to code. The Odin Project has been the best course I've taken thus far. Below you will find many of the projects that I've had the pleasure of creating while on my coding journey. Enjoy!"
+      "Hi, I'm a giant muffin-headed abomination who enjoys the challenge of learning to code. Below you will find many of the projects that I've had the pleasure of creating while on my coding journey. Enjoy!"
     );
+    contentText.style.textAlign = "left";
   } else if (
     btnMuffin.style.display !== "none" &&
     btnMug.style.display !== "none" &&
     btnPhone.style.display === "none"
   ) {
     addMessage(contentTextTitle, "CONTACT");
-    addMessage(contentText, "Forthcoming.");
+    addMessage(contentText, "madmuffinmandesign @gmail.com");
+    contentText.style.textAlign = "center";
   } else {
     clearMessage();
   }

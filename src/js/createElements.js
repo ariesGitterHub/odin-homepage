@@ -115,9 +115,9 @@ export function createHeader() {
     headerBtnContainer
   );
 
-  headerContentContainer.append(contentTextDiv);
+  headerContentContainer.append(imgFullMMM, contentTextDiv);
 
-  contentTextDiv.append(imgFullMMM, contentTextTitle, contentText);
+  contentTextDiv.append(contentTextTitle, contentText);
   
   headerBtnContainer.append(
     btnMuffin,

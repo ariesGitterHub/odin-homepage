@@ -5,6 +5,7 @@ export function getElements() {
     footer: document.querySelector("footer"),
 
     imgFullMMM: document.querySelector("#img-full-MMM"),
+    contentTextDiv: document.querySelector("#content-text-div"),
     contentTextTitle: document.querySelector("#content-text-title"),
     contentText: document.querySelector("#content-text"),
 
