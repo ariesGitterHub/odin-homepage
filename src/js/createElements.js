@@ -9,8 +9,8 @@ import svgPhone from "../assets/phoneLogo.svg";
 export function createHeader() {
   const { header } = getElements();
 
-  const headerItemContainer = createElement("div", {
-    id: "header-item-container",
+  const headerContainer = createElement("div", {
+    id: "header-container",
   });
 
   const headerContentContainer = createElement("div", {
@@ -144,10 +144,9 @@ export function createHeader() {
   //     class: "img-small",
   //     });
 
-  header.append(headerItemContainer);
-  headerItemContainer.append(
-    titleText,
-    headerContentContainer,
+  header.append(titleText, headerContainer);
+  headerContainer.append(
+      headerContentContainer,
     headerBtnContainer
   );
 

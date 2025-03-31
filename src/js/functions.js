@@ -74,7 +74,7 @@ export function handleTextContent() {
     contentTitleImg.src = svgPhone;
     // contentTitleImg.style.transform =
     //   "translateX(.5rem) translateY(-.125rem) rotate(45deg) ";
-    addMessage(contactEmail, "madmuffinmandesign @gmail.com");
+    addMessage(contactEmail, "madmuffinmandesign@gmail.com");
     contactEmail.style.textAlign = "center";
     addMessage(contactPhone, "1-555-8MUFFIN");
     addMessage(
