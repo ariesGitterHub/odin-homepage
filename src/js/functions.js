@@ -1,6 +1,6 @@
 import { getElements } from "./domQueries.js"
-import svgMug from "../assets/mugLogo.svg";
-import svgPhone from "../assets/phoneLogo.svg";
+import svgMug from "../assets/mugLogo2.svg";
+import svgPhone from "../assets/phoneLogo2.svg";
 // import svgContactEmail from "";
 // import svgContactPhone from "";
 // import svgContactGithub from "";
@@ -57,7 +57,7 @@ export function handleTextContent() {
     flexShowIt([contentTextDiv]);
     addMessage(contentTitle, "ABOUT ME");
     contentTitleImg.src = svgMug;
-    contentTitleImg.style.transform = "translateX(.25rem)";
+    // contentTitleImg.style.transform = "translateX(.785rem) translateY(.675rem)";
     addMessage(
       contentText,
       "Hi, I'm a giant muffin-headed abomination who enjoys the challenge of learning to code. Below you will find many of the projects that I've had the pleasure of creating while on my coding journey. Enjoy!"
@@ -72,6 +72,8 @@ export function handleTextContent() {
     flexShowIt([contactInfoDiv]);
     addMessage(contentTitle, "CONTACT");
     contentTitleImg.src = svgPhone;
+        contentTitleImg.style.transform =
+          // "translateX(0rem) translateY(0rem)";
     // contentTitleImg.style.transform =
     //   "translateX(.5rem) translateY(-.125rem) rotate(45deg) ";
     addMessage(contactEmail, "madmuffinmandesign@gmail.com");
