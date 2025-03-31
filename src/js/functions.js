@@ -1,4 +1,9 @@
 import { getElements } from "./domQueries.js"
+import svgMug from "../assets/mugLogo.svg";
+import svgPhone from "../assets/phoneLogo.svg";
+// import svgContactEmail from "";
+// import svgContactPhone from "";
+// import svgContactGithub from "";
 
 export function flexShowIt(elements) {
   // Ensure elements is an array or NodeList
@@ -21,12 +26,12 @@ export function flexHideIt(elements) {
 }
 
 export function handleBtnClicks() {
-    const { imgFullMMM, contentTextDiv, btnMuffin } = getElements();
+    const { imgFullMMM, contentTextTitleDiv, btnMuffin } = getElements();
     if (btnMuffin.style.display !== "none") {
       flexHideIt([imgFullMMM]);
-      flexShowIt([contentTextDiv]);
+      flexShowIt([contentTextTitleDiv]);
     } else if (btnMuffin.style.display === "none") {
-      flexHideIt([contentTextDiv]);
+      flexHideIt([contentTextTitleDiv]);
       flexShowIt([imgFullMMM]);
     }
 }
@@ -42,13 +47,17 @@ function clearMessage() {
 }
 
 export function handleTextContent() {
-  const { contentTextTitle, contentText, btnMuffin, btnMug, btnPhone } = getElements();
+  const { contentTextTitleDiv, contentTitle, contentTitleImg, contentTextDiv, contentText, contactInfoDiv, contactEmail, contactPhone, contactGithub, btnMuffin, btnMug, btnPhone } = getElements();
   if (
     btnMuffin.style.display !== "none" &&
     btnMug.style.display === "none" &&
     btnPhone.style.display !== "none"
   ) {
-    addMessage(contentTextTitle, "ABOUT ME");
+    flexHideIt([contactInfoDiv]);
+    flexShowIt([contentTextDiv]);
+    addMessage(contentTitle, "ABOUT ME");
+    contentTitleImg.src = svgMug;
+    contentTitleImg.style.transform = "translateX(.25rem)";
     addMessage(
       contentText,
       "Hi, I'm a giant muffin-headed abomination who enjoys the challenge of learning to code. Below you will find many of the projects that I've had the pleasure of creating while on my coding journey. Enjoy!"
@@ -59,9 +68,20 @@ export function handleTextContent() {
     btnMug.style.display !== "none" &&
     btnPhone.style.display === "none"
   ) {
-    addMessage(contentTextTitle, "CONTACT");
-    addMessage(contentText, "madmuffinmandesign @gmail.com");
-    contentText.style.textAlign = "center";
+    flexHideIt([contentTextDiv]);
+    flexShowIt([contactInfoDiv]);
+    addMessage(contentTitle, "CONTACT");
+    contentTitleImg.src = svgPhone;
+    // contentTitleImg.style.transform =
+    //   "translateX(.5rem) translateY(-.125rem) rotate(45deg) ";
+    addMessage(contactEmail, "madmuffinmandesign @gmail.com");
+    contactEmail.style.textAlign = "center";
+    addMessage(contactPhone, "1-555-8MUFFIN");
+    addMessage(
+      contactGithub,
+      "github.com/madmuffinmandesign"
+    );
+
   } else {
     clearMessage();
   }

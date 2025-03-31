@@ -4,7 +4,7 @@ import svgFullMMM from "../assets/fullMMM.svg";
 import svgMuffin from "../assets/muffinLogo.svg";
 import svgMug from "../assets/mugLogo.svg";
 import svgPhone from "../assets/phoneLogo.svg";
-import svgClear from "../assets/xLogo.svg";
+// import svgClear from "../assets/xLogo.svg";
 
 export function createHeader() {
   const { header } = getElements();
@@ -30,26 +30,62 @@ export function createHeader() {
     "The Mad Muffin Man"
   );
 
-  const contentTextDiv = createElement(
-    "div",
-    {
-      id: "content-text-div",
-    //   class: "",
-    });
+  // const contentContainer = createElement("div", {
+  //   id: "content-container",
+  //   //   class: "",
+  // });
 
-    const contentTextTitle = createElement(
-      "h2",
-      {
-        id: "content-text-title",
-        class: "special-text",
-      });
+  const contentTextTitleDiv = createElement("div", {
+    id: "content-text-title-div",
+    // class: "",
+  });
 
-        const contentText = createElement(
-          "p",
-          {
-            id: "content-text",
-            class: "normal-text",
-          });
+  const contentTitleDiv = createElement("div", {
+    id: "content-title-div",
+    // class: "",
+  });
+
+  const contentTitle = createElement("h2", {
+    id: "content-title",
+    class: "special-text",
+  });
+
+  const contentTitleImg = createImg({
+    id: "content-title-img",
+    src: "",
+    alt: "",
+    // class: "img-small",
+  });
+
+  const contentTextDiv = createElement("p", {
+    id: "content-text-div",
+    // class: "normal-text",
+  });
+
+  const contentText = createElement("p", {
+    id: "content-text",
+    class: "normal-text",
+  });
+
+  const contactInfoDiv = createElement("div", {
+    id: "contact-info-div",
+    // class: "normal-text",
+  });
+
+  const contactEmail = createElement("p", {
+    id: "contact-email",
+    class: "normal-text",
+  });
+
+  const contactPhone = createElement("p", {
+    id: "contact-phone",
+    class: "normal-text",
+  });
+
+  const contactGithub = createElement("p", {
+    id: "contact-github",
+    class: "normal-text",
+  });
 
   const btnMuffin = createElement("button", {
     id: "btn-muffin",
@@ -115,10 +151,14 @@ export function createHeader() {
     headerBtnContainer
   );
 
-  headerContentContainer.append(imgFullMMM, contentTextDiv);
-
-  contentTextDiv.append(contentTextTitle, contentText);
-  
+  headerContentContainer.append(
+    imgFullMMM,
+    contentTextTitleDiv,
+  );
+  contentTextTitleDiv.append(contentTitleDiv, contentTextDiv, contactInfoDiv);
+  contentTitleDiv.append(contentTitleImg, contentTitle);
+  contentTextDiv.append(contentText);
+  contactInfoDiv.append(contactEmail, contactPhone, contactGithub);
   headerBtnContainer.append(
     btnMuffin,
     btnMug,

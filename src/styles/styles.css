@@ -66,6 +66,12 @@
     var(--circle-red)
   );
 
+  --background-btn-hover: linear-gradient(
+    var(--linear-gradient-deg),
+    var(--standard-black),
+    var(--circle-red)
+  );
+
   --font-title: "Showcard Gothic", sans-serif;
   --font-text: "Montserrat", sans-serif;
 
@@ -81,15 +87,25 @@
   padding: 0;
 }
 
+/* CSS Reset for h1 and h2 */
+h1, h2, p {
+    margin: 0;            /* Remove default margin */
+    padding: 0;           /* Remove default padding */
+    font-size: inherit;   /* Inherit font size from parent */
+    font-weight: inherit; /* Inherit font weight from parent */
+    line-height: inherit; /* Inherit line height from parent */
+    text-align: inherit;  /* Inherit text alignment from parent */
+    color: inherit;       /* Inherit text color from parent */
+}
+
 html,
 body {
   height: 100%;
   width: 100%;
   /* Below, reduces base font size for mobile, a convenient way to backdoor size changes easily, reduce for mobile views */
-  font-size: 14px;
+  font-size: 16px;
   /* Improves text readability for mobile */
   line-height: 1.25;
-
 }
 
 /* HEADER */
@@ -118,7 +134,9 @@ padding: .25rem;
   font-size: 2rem;
   padding-top: 1rem;
   text-decoration: underline .25rem;
-}
+    /* text-shadow: 5px 5px 10px #ffffff4d, -5px -5px 10px #ffffff4d,
+    10px 10px 15px #ffffff4d; */
+} 
 
 #header-content-container {
 height: fit-content;
@@ -133,12 +151,10 @@ background-color: var(--standard-black);
 /* padding: 1rem; */
 }
 
-
-
-#content-text-div{
+/* #content-container {
 height: 20rem;
-width: 20rem;
-display: none;
+min-width: 20rem;
+display: flex;
 flex-direction: column;
 flex-wrap: wrap;
 align-items: center;
@@ -148,7 +164,7 @@ border: var(--mug-blue) solid .5rem;
 border-radius: 50%;
 margin: 1rem;
 padding: .5rem;
-}
+} */
 
 .img-big {
   height: auto;
@@ -160,27 +176,61 @@ padding: .5rem;
 }
 
 /* Starts as display: none */
-#content-text-title {
+#content-text-title-div {
+  height: 20rem;
+min-width: 20rem;
+  display: none;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+justify-content: start;
+background-color: var(--hoodie-blue);
+border: var(--mug-blue) solid .5rem;
+border-radius: 50%;
+margin: 1rem;
+/* padding: .5rem; */
+}
+
+#content-title-div {
+  height: fit-content;
+  width: fit-content;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* gap: .25rem; */
+  margin: .25rem
+}
+
+#content-title {
   color: var(--explosion-gold);
   font-family: var(--font-title);
   font-size: 1.5rem;
 }
 
-/* Starts as display: none */
-#content-text {
-display: block;
-flex-direction: row;
-flex-wrap: wrap;
-  color: var(--explosion-gold);
-  font-family: var(--font-text);
-  font-size: 1rem;
-  margin: 0rem .5rem .5rem 1rem;
-  padding: 1rem;
+#content-title-img {
+  height: auto;
+  width: 6rem;
 }
 
+#content-text-div, #contact-info-div {
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+ }
+
+#content-text {
+   padding: 0 1.75rem 0 1.75rem;
+}
+
+.normal-text {
+    color: var(--explosion-gold);
+    font-family: var(--font-text);
+  font-size: .85rem;
+}
 
 #header-btn-container {
 /* height: fit-content;
@@ -284,5 +334,26 @@ main {
 
 /* FOOTER */
 footer {
+
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 350px) {
+  html,
+  body {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 500px) {
+  html,
+  body {
+    font-size: 16px;
+
+  }
+}
+
+@media (min-width: 800px) {
 
 }
