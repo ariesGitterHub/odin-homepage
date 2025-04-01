@@ -26,13 +26,13 @@ export function flexHideIt(elements) {
 }
 
 export function handleBtnClicks() {
-    const { imgFullMMM, contentTextTitleDiv, btnMuffin } = getElements();
+    const { contentImgBigDiv, contentTextTitleDiv, btnMuffin } = getElements();
     if (btnMuffin.style.display !== "none") {
-      flexHideIt([imgFullMMM]);
+      flexHideIt([contentImgBigDiv]);
       flexShowIt([contentTextTitleDiv]);
     } else if (btnMuffin.style.display === "none") {
       flexHideIt([contentTextTitleDiv]);
-      flexShowIt([imgFullMMM]);
+      flexShowIt([contentImgBigDiv]);
     }
 }
 
@@ -76,13 +76,13 @@ export function handleTextContent() {
           // "translateX(0rem) translateY(0rem)";
     // contentTitleImg.style.transform =
     //   "translateX(.5rem) translateY(-.125rem) rotate(45deg) ";
-    addMessage(contactEmail, "madmuffinmandesign@gmail.com");
+    addMessage(contactEmail, "madmuffinmandesign @gmail.com");
     contactEmail.style.textAlign = "center";
     addMessage(contactPhone, "1-555-8MUFFIN");
-    addMessage(
-      contactGithub,
-      "github.com/madmuffinmandesign"
-    );
+    // addMessage(
+    //   contactGithub,
+    //   "github.com/madmuffinmandesign"
+    // );
 
   } else {
     clearMessage();

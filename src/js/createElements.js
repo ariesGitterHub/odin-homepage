@@ -5,6 +5,9 @@ import svgMuffin from "../assets/muffinLogo.svg";
 import svgMug from "../assets/mugLogo.svg";
 import svgPhone from "../assets/phoneLogo.svg";
 // import svgClear from "../assets/xLogo.svg";
+import svgContactEmail from "../assets/contactEmail.svg";
+import svgContactPhone from "../assets/contactPhone.svg";
+import svgContactGithub from "../assets/contactGithub.svg";
 
 export function createHeader() {
   const { header } = getElements();
@@ -34,6 +37,11 @@ export function createHeader() {
   //   id: "content-container",
   //   //   class: "",
   // });
+
+    const contentImgBigDiv = createElement("div", {
+      id: "content-img-big-div",
+      // class: "",
+    });
 
   const contentTextTitleDiv = createElement("div", {
     id: "content-text-title-div",
@@ -72,9 +80,23 @@ export function createHeader() {
     // class: "normal-text",
   });
 
+    const imgContactEmail = createImg({
+      id: "img-contact-email",
+      src: svgContactEmail,
+      alt: "Email icon",
+      class: "img-contact",
+    });
+
   const contactEmail = createElement("p", {
     id: "contact-email",
     class: "normal-text",
+  });
+
+  const imgContactPhone = createImg({
+    id: "img-contact-phone",
+    src: svgContactPhone,
+    alt: "Phone icon",
+    class: "img-contact",
   });
 
   const contactPhone = createElement("p", {
@@ -82,10 +104,17 @@ export function createHeader() {
     class: "normal-text",
   });
 
-  const contactGithub = createElement("p", {
-    id: "contact-github",
-    class: "normal-text",
-  });
+  //   const imgContactGithub= createImg({
+  //     id: "img-contact-github",
+  //     src: svgContactGithub,
+  //     alt: "Github icon",
+  //     class: "img-contact",
+  //   });
+
+  // const contactGithub = createElement("p", {
+  //   id: "contact-github",
+  //   class: "normal-text",
+  // });
 
   const btnMuffin = createElement("button", {
     id: "btn-muffin",
@@ -150,14 +179,19 @@ export function createHeader() {
     headerBtnContainer
   );
 
-  headerContentContainer.append(
-    imgFullMMM,
-    contentTextTitleDiv,
-  );
+  headerContentContainer.append(contentImgBigDiv, contentTextTitleDiv);
+  contentImgBigDiv.append(imgFullMMM);
   contentTextTitleDiv.append(contentTitleDiv, contentTextDiv, contactInfoDiv);
   contentTitleDiv.append(contentTitleImg, contentTitle);
   contentTextDiv.append(contentText);
-  contactInfoDiv.append(contactEmail, contactPhone, contactGithub);
+  contactInfoDiv.append(
+    imgContactEmail, 
+    contactEmail, 
+    imgContactPhone,
+    contactPhone, 
+    // imgContactGithub,
+    // contactGithub
+  );
   headerBtnContainer.append(
     btnMuffin,
     btnMug,

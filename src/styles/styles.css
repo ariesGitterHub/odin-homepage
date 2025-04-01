@@ -37,19 +37,24 @@
 /* ROOT/SHARED/GLOBAL */
 :root {
   /* Colors */
-  --circle-red: #cc3333;
+  /* --circle-red: #cc3333; */
+    --circle-red: #BD4949;
     --wrapper-red: #8b1818;
     /* --bottom-red: #292222; */
   --wrapper-pink: #e57676;
-  --explosion-gold: #ffd700;
+  /* --explosion-gold: #ffd700; */
+    --explosion-gold: #EDBD58;
     --mug-blue: #898d9B;
   --shadow-blue: #666A77;
   --hoodie-blue: #484662;
   /* --bottom-blue: #1c1d1e; */
   --desk-brown: #4d4a47;
-  --standard-black: #150701;
+  /* --standard-black: #150701; */
+   --standard-black: #0b0806;
+  --standard-black-trans: #0b080600;
   /* --standard-black-trans: #00000088; */
-  --standard-white: #d9c6ad;
+  /* --standard-white: #d9c6ad; */
+   --standard-white: #d1c5b6;
   --computer-grey: #808080;
   --muffin-brown: #563f3f;
   --nut-brown: #a38686;
@@ -59,7 +64,7 @@
   --box-shadow: 0 5px 10px var(--standard-black);
     --background-main: linear-gradient(
     var(--linear-gradient-deg),
-    var(--standard-black),
+    var(--standard-black-trans),
     var(--hoodie-blue)
   );
 
@@ -90,14 +95,14 @@
         --background-btn-hover: linear-gradient(
     var(--linear-gradient-deg),
     var(--standard-black),
-    var(--standard-white)
+    var(--circle-red)
   );
 
   --font-title: "Showcard Gothic", sans-serif;
   --font-text: "Montserrat", sans-serif;
 
   --width-master: 90vw;
-  --linear-gradient-deg: 5deg;
+  --linear-gradient-deg: 1deg;
   --scale-big: 1.1;
   --scale-small: 0.9;
 }
@@ -124,6 +129,7 @@ body {
   height: 100%;
   width: 100%;
   /* Below, reduces base font size for mobile, a convenient way to backdoor size changes easily, reduce for mobile views */
+  background-color: var(--standard-black);
   font-size: 14px;
   /* Improves text readability for mobile */
   line-height: 1.25;
@@ -144,13 +150,15 @@ flex-direction: column;
 /* flex-wrap: wrap; */
 align-items: center;
 justify-content: center;
-background-color: var(--standard-black);
+/* background-color: var(--standard-black); */
 padding: .25rem;
 /* background-color: darkred; */
 }
 
 #title-text {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   background-color: var(--standard-black);
@@ -158,9 +166,10 @@ padding: .25rem;
     /* color: var(--circle-red);   */
     /* color: var(--explosion-gold); */
   font-family: var(--font-title);
-  font-size: 2rem;
-  padding-top: 1rem;
-  text-decoration: var(--mug-blue) underline .25rem;
+  font-size: 1.85rem;
+  padding: 1rem;
+  text-align: center;
+  /* text-decoration: var(--mug-blue) underline .25rem; */
     /* text-shadow: 5px 5px 10px #ffffff4d, -5px -5px 10px #ffffff4d,
     10px 10px 15px #ffffff4d; */
 } 
@@ -174,9 +183,9 @@ flex-direction: column;
 /* flex-wrap: wrap; */
 align-items: center;
 justify-content: center;
-background-color: var(--standard-black);
+/* background-color: var(--standard-black); */
 /* background-color: var(--standard-white); */
-border-radius: 50%;
+/* border-radius: 50%; */
 /* padding: 1rem; */
 }
 
@@ -195,39 +204,51 @@ margin: 1rem;
 padding: .5rem;
 } */
 
+#content-img-big-div {
+height: 20rem;
+width: 20rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border-radius: 2rem;
+background: none;
+margin: 0 1rem 1rem 1rem;
+padding: 1rem;
+}
+
 .img-big {
   height: auto;
-  width: 23rem;
-  display: flex;
+  width: 25rem;
+  /* display: flex; */
   /* margin-top: -1.75rem; */
    /* font-family: var(--font-title); */
   /* margin: .25rem 1rem 0 1rem; */
   /* border: #000000 solid .5rem; */
    /* transform: translateX(.5rem) translateY(.375rem); */
+   /* padding: 1rem; */
 }
 
 /* Starts as display: none */
 #content-text-title-div {
-height: 21rem;
-/* min-width: 20rem; */
-max-width: 25rem;
-width: fit-content;
+height: 20rem;
+width: 20rem;
 display: none;
 flex-direction: column;
-/* flex-wrap: wrap; */
-/* flex-grow: 1; */
 align-items: center;
 justify-content: start;
 /* background-color: var(--hoodie-blue); */
 /* border: var(--mug-blue) solid .5rem; */
 /* border-radius: 50%; */
 /* border: #000000 solid .5rem; */
-border: var(--standard-white) solid .5rem;
+/* border: var(--standard-white) solid .5rem; */
+/* border-radius: 2rem 2rem 0 0; */
 border-radius: 2rem;
 background: var(--background-main);
-margin: 1rem;
+margin: 0 1rem 1rem 1rem;
 /* overflow: hidden; */
-padding: .75rem;
+/* opacity: .5; */
+padding: 1rem;
 }
 
 #content-title-div {
@@ -258,17 +279,24 @@ padding: .75rem;
     display: flex;
   flex-direction: column;
   align-items: center;
-  gap: .5rem;
+  /* gap: .5rem; */
      /* padding: 0 1.75rem 0 1.75rem; */
      /* margin: 0 1rem 1rem 1rem; */
+    /* padding-bottom: 1rem; */
+ }
+
+ #contact-info-div {
+    gap: .75rem;
  }
 
 #content-text {
   height: fit-content;
   width: fit-content;
    /* margin: 0.75rem; */
-  /* padding: 0 1.25rem 0 1.25rem; */
+  padding: 0 1.25rem 0 1rem;
    /* margin: 1rem; */
+     /* margin-bottom: 1rem; */
+  
 }
 
 .normal-text {
@@ -283,14 +311,14 @@ padding: .75rem;
 width: fit-content; */
 display: flex;
 flex-direction: row;
-gap: 1.75rem;
+gap: 2rem;
 flex-wrap: wrap;
 align-items: center;
 justify-content: center;
 /* background-color: #87cfeb70; */
 /* transform: translateY(-1.125rem); */
 /* transform: translateX(-5rem); */
-margin: .5rem;
+/* margin: .25rem; */
 }
 
 button {
@@ -301,11 +329,12 @@ button {
   justify-content: center;  
   /* background: var(--background-btn); */
   /* background: none; */
-  background-color: var(--hoodie-blue);
+  /* background-color: var(--hoodie-blue); */
+    background-color: var(--explosion-gold);
   /* border: var(--mug-blue) solid 1rem;         */
   /* border: var(--mug-blue) solid .5rem; */
   /* border: #000000 solid .5rem; */
-    border: var(--standard-white) solid .5rem;
+    border: var(--hoodie-blue) solid .5rem;
     /* border: var(--standard-black) solid .25rem;  */
 /* border: none; */
   border-radius: 50%;
@@ -333,7 +362,7 @@ button {
 button:hover {
   /* background: var(--background-btn-hover); */
     background: var(--background-btn-hover);
-  border-color: var(--mug-blue);
+  border-color: var(--explosion-gold);
   transform: scale(var(--scale-big));
   /* transform: rotate(-45deg); */
 }
@@ -354,7 +383,13 @@ button:active {
   /* transform: rotate(-90deg); */
 }
 
+.img-contact {
+  height: auto;
+  width: 1.75rem;
+margin-bottom: -.5rem;
+/* margin: .125rem */
 
+}
 
 .img-small {
   height: auto;
