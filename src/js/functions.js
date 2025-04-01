@@ -25,6 +25,39 @@ export function flexHideIt(elements) {
   });
 }
 
+// export function flexShowIt(elements) {
+//   // Ensure elements is an array or NodeList
+//   const elementsArray = Array.isArray(elements)
+//     ? elements
+//     : Array.from(elements);
+
+//   elementsArray.forEach((element) => {
+//     element.style.display = "flex"; // Set to flex (layout)
+//     element.classList.remove("hidden"); // Remove the hidden class to start fade-in
+//     element.classList.add("visible"); // Add the visible class to show it
+//   });
+// }
+
+// export function flexHideIt(elements) {
+//   // Ensure elements is an array or NodeList
+//   const elementsArray = Array.isArray(elements)
+//     ? elements
+//     : Array.from(elements);
+
+//   elementsArray.forEach((element) => {
+//     element.classList.remove("visible"); // Remove the visible class to start fade-out
+//     element.classList.add("hidden"); // Add the hidden class to fade out
+
+//     // Once the transition completes, set display to none
+//     setTimeout(() => {
+//       element.style.display = "none"; // Hide the element after the transition ends
+//     }, 500); // Match the transition duration (0.5s)
+//   });
+// }
+
+
+
+
 export function handleBtnClicks() {
     const { contentImgBigDiv, contentTextTitleDiv, btnMuffin } = getElements();
     if (btnMuffin.style.display !== "none") {
@@ -41,7 +74,7 @@ function addMessage(element, msg) {
 }
 
 function clearMessage() {
-  const { contentTextTitle, contentText } = getMessageElements();
+  const { contentTextTitle, contentText } = getElements();
       contentTextTitle.innerText = "";
       contentText.innerText = "";
 }
@@ -72,7 +105,7 @@ export function handleTextContent() {
     flexShowIt([contactInfoDiv]);
     addMessage(contentTitle, "CONTACT");
     contentTitleImg.src = svgPhone;
-        contentTitleImg.style.transform =
+        // contentTitleImg.style.transform =
           // "translateX(0rem) translateY(0rem)";
     // contentTitleImg.style.transform =
     //   "translateX(.5rem) translateY(-.125rem) rotate(45deg) ";
