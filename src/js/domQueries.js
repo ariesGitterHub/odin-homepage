@@ -16,7 +16,7 @@ export function getElements() {
     contactInfoDiv: document.querySelector("#contact-info-div"),
     contactEmail: document.querySelector("#contact-email"),
     contactPhone: document.querySelector("#contact-phone"),
-    contactGithub: document.querySelector("#contact-github"),
+    // contactGithub: document.querySelector("#contact-github"),
 
     btnMuffin: document.querySelector("#btn-muffin"),
     btnMug: document.querySelector("#btn-mug"),
