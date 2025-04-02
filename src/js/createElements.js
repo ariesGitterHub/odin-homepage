@@ -7,7 +7,7 @@ import svgPhone from "../assets/phoneLogo.svg";
 // import svgClear from "../assets/xLogo.svg";
 import svgContactEmail from "../assets/contactEmail.svg";
 import svgContactPhone from "../assets/contactPhone.svg";
-import svgContactGithub from "../assets/contactGithub.svg";
+// import svgContactGithub from "../assets/contactGithub.svg";
 
 export function createHeader() {
   const { header } = getElements();
@@ -32,11 +32,6 @@ export function createHeader() {
     },
     "The Mad Muffin Man"
   );
-
-  // const contentContainer = createElement("div", {
-  //   id: "content-container",
-  //   //   class: "",
-  // });
 
     const contentImgBigDiv = createElement("div", {
       id: "content-img-big-div",
@@ -104,18 +99,6 @@ export function createHeader() {
     class: "normal-text",
   });
 
-  //   const imgContactGithub= createImg({
-  //     id: "img-contact-github",
-  //     src: svgContactGithub,
-  //     alt: "Github icon",
-  //     class: "img-contact",
-  //   });
-
-  // const contactGithub = createElement("p", {
-  //   id: "contact-github",
-  //   class: "normal-text",
-  // });
-
   const btnMuffin = createElement("button", {
     id: "btn-muffin",
     class: "btn",
@@ -159,27 +142,17 @@ export function createHeader() {
     class: "img-small",
   });
 
-  //   const btnClear = createElement(
-  //     "button",
-  //     {
-  //       id: "btn-clear",
-  //       class: "btn",
-  //     });
-
-  //     const imgClear = createImg({
-  //     id: "img-clear",
-  //     src: svgClear,
-  //     alt: "Large X",
-  //     class: "img-small",
-  //     });
-
   header.append(titleText, headerContainer);
   headerContainer.append(
       headerContentContainer,
-    headerBtnContainer
+    // headerBtnContainer
   );
 
-  headerContentContainer.append(contentImgBigDiv, contentTextTitleDiv);
+  headerContentContainer.append(
+    contentImgBigDiv,
+    contentTextTitleDiv,
+    headerBtnContainer
+  );
   contentImgBigDiv.append(imgFullMMM);
   contentTextTitleDiv.append(contentTitleDiv, contentTextDiv, contactInfoDiv);
   contentTitleDiv.append(contentTitleImg, contentTitle);

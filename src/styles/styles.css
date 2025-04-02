@@ -62,7 +62,7 @@
   --box-shadow: 0 5px 10px var(--standard-black);
   --background-main: linear-gradient(
     var(--linear-gradient-deg),
-    var(--standard-black-trans),
+    var(--standard-black),
     var(--hoodie-blue)
   );
 
@@ -75,7 +75,7 @@
   --font-title: "Showcard Gothic", sans-serif;
   --font-text: "Montserrat", sans-serif;
   --linear-gradient-deg: 5deg;
-  --scale-big: 1.1;
+  --scale-big: 1.125;
   --scale-small: 0.9;
 
   /* Initial Sizes */
@@ -88,11 +88,11 @@
   --margin-master: 0.25rem;
   --padding-master: 0.25rem;
   --gap-master: 0.75rem;
-  --border-radius-master: 2rem;
+  --border-radius-master: 1.75rem;
 
   --content-div: 22rem;
   --img-full-add-on: 4rem;
-  --img-title: 7rem;
+  --img-title: 8rem;
   --img-btn: 8rem;
 }
 
@@ -180,6 +180,9 @@ header {
   align-items: center;
   justify-content: center;
   margin: var(--margin-master);
+
+  background: var(--background-main);
+   border-radius: var(--border-radius-master);
 }
 
 #content-img-big-div, #content-text-title-div  {
@@ -188,7 +191,9 @@ header {
    /* justify-content: start; */
   background: none;
       /* background: var(--background-main); */
-  border-radius: var(--border-radius-master);
+
+  /* border-radius: var(--border-radius-master); */
+
   /* margin: 0 1rem 1rem 1rem; */
   margin-top: var(--margin-master);
   /* padding: 1rem; */
@@ -218,6 +223,7 @@ header {
 .img-big {
   height: auto;
   width: calc(var(--content-div) + var(--img-full-add-on));
+  transform: translateX(0.275rem) translateY(-0.5rem);
 }
 
 /* Starts as display: none */
@@ -227,7 +233,7 @@ header {
   align-items: center;
   justify-content: center;
     gap: var(--gap-master);
-  background: var(--background-main);
+  /* background: var(--background-main); */
 }
 
 #content-title-div {
@@ -294,7 +300,8 @@ button {
   align-items: center;
   justify-content: center;
   background-color: var(--explosion-gold);
-  border: var(--hoodie-blue) solid 0.5rem;
+  /* border: var(--hoodie-blue) solid 0.5rem; */
+   border: var(--standard-black) solid 0.75rem;
   border-radius: 50%;
   font-family: var(--font-title);
     padding: var(--padding-master);
@@ -381,8 +388,12 @@ footer {
   /* --border-radius-master: 2rem; */
   }
    
-  #header-container {
+  /* #header-container {
     flex-direction: row;
+  } */
+
+  #header-content-container {
+        flex-direction: row;
   }
 
   #header-btn-container {
