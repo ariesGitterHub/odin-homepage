@@ -8,6 +8,10 @@ import svgPhone from "../assets/phoneLogo.svg";
 import svgContactEmail from "../assets/contactEmail.svg";
 import svgContactPhone from "../assets/contactPhone.svg";
 // import svgContactGithub from "../assets/contactGithub.svg";
+import { ProjectCard } from "./classProjectCard.js";
+import { createCardItems } from "./functions.js";
+import screenshotBattleship from "../assets/screenshotBattleship.png";
+import screenshotWeathervane from "../assets/screenshotWeathervane.png";
 
 export function createHeader() {
   const { header } = getElements();
@@ -33,10 +37,10 @@ export function createHeader() {
     "The Mad Muffin Man"
   );
 
-    const contentImgBigDiv = createElement("div", {
-      id: "content-img-big-div",
-      // class: "",
-    });
+  const contentImgBigDiv = createElement("div", {
+    id: "content-img-big-div",
+    // class: "",
+  });
 
   const contentTextTitleDiv = createElement("div", {
     id: "content-text-title-div",
@@ -75,12 +79,12 @@ export function createHeader() {
     // class: "normal-text",
   });
 
-    const imgContactEmail = createImg({
-      id: "img-contact-email",
-      src: svgContactEmail,
-      alt: "Email icon",
-      class: "img-contact",
-    });
+  const imgContactEmail = createImg({
+    id: "img-contact-email",
+    src: svgContactEmail,
+    alt: "Email icon",
+    class: "img-contact",
+  });
 
   const contactEmail = createElement("p", {
     id: "contact-email",
@@ -144,7 +148,7 @@ export function createHeader() {
 
   header.append(titleText, headerContainer);
   headerContainer.append(
-      headerContentContainer,
+    headerContentContainer
     // headerBtnContainer
   );
 
@@ -158,10 +162,10 @@ export function createHeader() {
   contentTitleDiv.append(contentTitleImg, contentTitle);
   contentTextDiv.append(contentText);
   contactInfoDiv.append(
-    imgContactEmail, 
-    contactEmail, 
+    imgContactEmail,
+    contactEmail,
     imgContactPhone,
-    contactPhone, 
+    contactPhone
     // imgContactGithub,
     // contactGithub
   );
@@ -176,4 +180,49 @@ export function createHeader() {
   btnMug.append(imgMug);
   btnPhone.append(imgPhone);
   //   btnClear.append(imgClear);
+}
+
+export function createMain() {
+  const { main } = getElements();
+
+  const mainContainer = createElement("div", {
+    id: "main-container",
+  });
+
+  const mainContentContainer = createElement("div", {
+    id: "main-content-container",
+  });
+
+  const battleship = createCardItems(
+    "battleship",
+    "Battleship",
+    "https://ariesgitterhub.github.io/odin-battleship/",
+    screenshotBattleship,
+    "This is my own variant of the famous electronic board game, Battleship. This code was my first foray into Test Driven Development (TDD)."
+  );
+
+  const weathervane = createCardItems(
+    "weathervane",
+    "Weathervane",
+    "https://ariesgitterhub.github.io/odin-weather-app/",
+    screenshotWeathervane,
+    "My first use of an API set up, this weather utilizes weather data from the Visual Crossing API."
+  );
+
+    // const testCase2 = createCardItems(
+    //   "test-case2",
+    //   "Test Case2",
+    //   "https://www.example.com",
+    //   "This is just a humble test2."
+    // );
+
+
+
+  main.append(mainContainer);
+  mainContainer.append(mainContentContainer);
+  mainContentContainer.append(
+    battleship,
+    weathervane,
+    // testCase2,
+  );
 }

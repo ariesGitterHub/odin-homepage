@@ -1,5 +1,5 @@
 import "./styles/styles.css";
-import { createHeader } from "./js/createElements.js";
+import { createHeader, createMain } from "./js/createElements.js";
 import { getElements } from "./js/domQueries.js";
 import {
   flexShowIt,
@@ -10,7 +10,7 @@ import {
 
 document.addEventListener("DOMContentLoaded", () => {
   createHeader();
-// handleTextContent();
+  createMain();
   const { btnMuffin, btnMug, btnPhone } = getElements();
 
   btnMuffin.addEventListener("click", () => {
