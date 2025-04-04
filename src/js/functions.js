@@ -70,7 +70,7 @@ export function handleTextContent() {
     contentTitleImg.src = svgMug;
     addMessage(
       contentText,
-      "Hi, I'm a giant muffin-headed abomination who enjoys the challenge of learning to code. Below you will find many of the projects that I've had the pleasure of creating while on my coding journey. Enjoy!"
+      "Hi, I'm a giant muffin-headed abomination who loves the challenge of learning to code. Below you will find many of the projects that I've had the pleasure of creating while on my coding journey. Enjoy!"
     );
     contentText.style.textAlign = "left";
   } else if (
@@ -82,7 +82,7 @@ export function handleTextContent() {
     flexShowIt([contactInfoDiv]);
     addMessage(contentTitle, "CONTACT");
     contentTitleImg.src = svgPhone;
-    addMessage(contactEmail, "madmuffinmandesign @gmail.com");
+    addMessage(contactEmail, "madmuffinmandesign@gmail.com");
     contactEmail.style.textAlign = "center";
     addMessage(contactPhone, "1-555-8MUFFIN");
   } else {

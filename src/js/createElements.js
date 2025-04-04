@@ -10,19 +10,33 @@ import svgContactPhone from "../assets/contactPhone.svg";
 // import svgContactGithub from "../assets/contactGithub.svg";
 import { ProjectCard } from "./classProjectCard.js";
 import { createCardItems } from "./functions.js";
-import screenshotBattleshipWWII from "../assets/screenshotBattleshipWWII.png";
-import screenshotWeathervane from "../assets/screenshotWeathervane.png";
-import screenshotTaskKing from "../assets/screenshotTaskKing.png";
-import screenshotTheHiddenGarden from "../assets/screenshotTheHiddenGarden.png";
-import screenshotTicTacZodiac from "../assets/screenshotTicTacZodiac.png";
-import screenshotMyReadList from "../assets/screenshotMyReadList.png";
-import screenshotMyDashboard from "../assets/screenshotMyDashboard.png";
-import screenshotMULectureEvent from "../assets/screenshotMULectureEvent.png";
-import screenshotCalculator from "../assets/screenshotCalculator.png";
-import screenshotEtchADungeon from "../assets/screenshotEtchADungeon.png";
-import screenshotWuXingRoshambo from "../assets/screenshotWuXingRoshambo.png";
-import screenshotStupidSoundMachine from "../assets/screenshotStupidSoundMachine.png";
-import screenshotStarSignQuoteGenerator from "../assets/screenshotStarSignQuoteGenerator.png";
+// import screenshotBattleshipWWII from "../assets/screenshotBattleshipWWII.png";
+// import screenshotWeathervane from "../assets/screenshotWeathervane.png";
+// import screenshotTaskKing from "../assets/screenshotTaskKing.png";
+// import screenshotTheHiddenGarden from "../assets/screenshotTheHiddenGarden.png";
+// import screenshotTicTacZodiac from "../assets/screenshotTicTacZodiac.png";
+// import screenshotMyReadList from "../assets/screenshotMyReadList.png";
+// import screenshotMyDashboard from "../assets/screenshotMyDashboard.png";
+// import screenshotMULectureEvent from "../assets/screenshotMULectureEvent.png";
+// import screenshotCalculator from "../assets/screenshotCalculator.png";
+// import screenshotEtchADungeon from "../assets/screenshotEtchADungeon.png";
+// import screenshotWuXingRoshambo from "../assets/screenshotWuXingRoshambo.png";
+// import screenshotStupidSoundMachine from "../assets/screenshotStupidSoundMachine.png";
+// import screenshotStarSignQuoteGenerator from "../assets/screenshotStarSignQuoteGenerator.png";
+
+import screenshotBattleshipWWII from "../assets/screenshotBattleshipWWII.jpg";
+import screenshotWeathervane from "../assets/screenshotWeathervane.jpg";
+import screenshotTaskKing from "../assets/screenshotTaskKing.jpg";
+import screenshotTheHiddenGarden from "../assets/screenshotTheHiddenGarden.jpg";
+import screenshotTicTacZodiac from "../assets/screenshotTicTacZodiac.jpg";
+import screenshotMyReadList from "../assets/screenshotMyReadList.jpg";
+import screenshotMyDashboard from "../assets/screenshotMyDashboard.jpg";
+import screenshotMULectureEvent from "../assets/screenshotMULectureEvent.jpg";
+import screenshotCalculator from "../assets/screenshotCalculator.jpg";
+import screenshotEtchADungeon from "../assets/screenshotEtchADungeon.jpg";
+import screenshotWuXingRoshambo from "../assets/screenshotWuXingRoshambo.jpg";
+import screenshotStupidSoundMachine from "../assets/screenshotStupidSoundMachine.jpg";
+import screenshotStarSignQuoteGenerator from "../assets/screenshotStarSignQuoteGenerator.jpg";
 
 export function createHeader() {
   const { header } = getElements();
@@ -157,14 +171,17 @@ export function createHeader() {
     class: "img-small",
   });
 
-  header.append(titleText, headerContainer);
+  header.append(
+    // titleText, 
+    headerContainer);
   headerContainer.append(
+    titleText,
     headerContentContainer
     // headerBtnContainer
   );
 
   headerContentContainer.append(
-    contentImgBigDiv,
+      contentImgBigDiv,
     contentTextTitleDiv,
     headerBtnContainer
   );
