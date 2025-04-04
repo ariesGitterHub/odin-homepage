@@ -404,7 +404,7 @@ main {
 
 }
 
-.card{
+.card {
 height: 30rem;
 width: 22rem;
 display: flex;
@@ -427,7 +427,7 @@ padding: .25rem;
    padding: .25rem;
   }
 
- .img-screenshot{
+ .card-screenshot{
     height: 15rem;
     width: 15rem;
   background-color: var(--computer-grey);
@@ -446,6 +446,12 @@ padding: .25rem;
     font-family: var(--font-text);
     font-size: 1rem;
            margin: 1rem;
+  }
+
+  .card:hover {
+      background: var(--background-btn-hover);
+  border-color: var(--explosion-gold);
+  transform: scale(1.05);
   }
 
 /* FOOTER */

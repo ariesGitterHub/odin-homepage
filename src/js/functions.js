@@ -119,7 +119,7 @@ export function createCardItems(cardId, cardTitle, cardLink, cardImgSrc, cardBlu
     id: `img-screenshot-${cardId}`,
     src: cardImgSrc,
     alt: `Screenshot for ${cardTitle} webpage.`,
-    class: "img-screenshot",
+    class: "card-screenshot",
   });
 
   const blurb = createElement(
