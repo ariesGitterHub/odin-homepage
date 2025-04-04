@@ -18,6 +18,11 @@ import screenshotTicTacZodiac from "../assets/screenshotTicTacZodiac.png";
 import screenshotMyReadList from "../assets/screenshotMyReadList.png";
 import screenshotMyDashboard from "../assets/screenshotMyDashboard.png";
 import screenshotMULectureEvent from "../assets/screenshotMULectureEvent.png";
+import screenshotCalculator from "../assets/screenshotCalculator.png";
+import screenshotEtchADungeon from "../assets/screenshotEtchADungeon.png";
+import screenshotWuXingRoshambo from "../assets/screenshotWuXingRoshambo.png";
+import screenshotStupidSoundMachine from "../assets/screenshotStupidSoundMachine.png";
+import screenshotStarSignQuoteGenerator from "../assets/screenshotStarSignQuoteGenerator.png";
 
 export function createHeader() {
   const { header } = getElements();
@@ -212,7 +217,7 @@ export function createMain() {
     "Weathervane",
     "https://ariesgitterhub.github.io/odin-weather-app/",
     screenshotWeathervane,
-    "My first use of an API set up, this weather app utilizes worldwide weather data from the Visual Crossing API."
+    "My first use of an API set up, this weather app utilizes worldwide weather data from the Visual Crossing API. It is also an app that I use daily."
   );
 
   const todoApp = createCardItems(
@@ -244,7 +249,7 @@ export function createMain() {
     "MyReadList",
     "https://ariesgitterhub.github.io/odin-book-library/",
     screenshotMyReadList,
-    "This library app opened my brain up the world of the object design pattern and the use of the data-attribute."
+    "This library app opened my brain up the world of the object design pattern and the use of a cool technique, the data-attribute."
   );
 
   const dashboardApp = createCardItems(
@@ -260,9 +265,51 @@ export function createMain() {
     "Lecture Event",
     "https://ariesgitterhub.github.io/odin-sign-up-form/",
     screenshotMULectureEvent,
-    "This mock-up form for a fictional lecture event employs form field basics and controls, as well as front-end form validation."
+    "This mock-up form for a fictional lecture event employs form field basics and controls, as well as front-end input validation."
   );
 
+    const calculatorApp = createCardItems(
+      "calculator",
+      "Calculator",
+      "https://ariesgitterhub.github.io/odin-calculator/",
+      screenshotCalculator,
+      "A not-so-basic calculator that has buttons for getting Roman Numerals, factorials, percents in decimals, and one button for answering 'the meaning of life.'"
+    );
+
+        const easApp = createCardItems(
+          "eas",
+          "Etch-a-Dungeon",
+          "https://ariesgitterhub.github.io/odin-etch-a-sketch/",
+      screenshotEtchADungeon,
+      "An early project that was meant to be a simple Etch-A-Sketch demo; it morphed into something more, namely a working dungeon building app. Not mobile ready."
+    );
+
+    const rpsApp = createCardItems(
+      "rps",
+      "Wu Xing Roshambo",
+      "https://ariesgitterhub.github.io/odin-rock-paper-scissors/",
+      screenshotWuXingRoshambo,
+      "This is my take on the game 'Rock, Paper, Scissors.' This was my first time coding something that required game logic to determine outcomes. Not mobile ready."
+    );
+
+        const ssmApp = createCardItems(
+          "ssm",
+          "Stupid Sound Machine",
+          "https://scintillating-muffin-134894.netlify.app/",
+          screenshotStupidSoundMachine,
+          "An early app that I created for fun during this long coding journey. This app has a lot of humorous 'local pub conversation utility.'"
+        );
+
+  
+        const ssqgApp = createCardItems(
+          "ssqg",
+          "Quote Generator",
+          "https://whimsical-banoffee-187bf5.netlify.app/",
+          screenshotStarSignQuoteGenerator,
+          "This is the first real app that I deployed (using React too!). This was very early days in learning to code and I was definitely in the deep end, treading water."
+        );
+
+  // https://ariesgitterhub.github.io/odin-rock-paper-scissors/
   // const testCase2 = createCardItems(
   //   "test-case2",
   //   "Test Case2",
@@ -281,6 +328,11 @@ export function createMain() {
     libraryApp,
     dashboardApp,
     signupApp,
+    calculatorApp,
+    easApp,
+    rpsApp,
+    ssmApp,
+    ssqgApp
     // testCase2,
   );
 }

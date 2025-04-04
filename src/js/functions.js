@@ -28,11 +28,11 @@ export function handleBtnClicks() {
   if (btnMuffin.style.display !== "none") {
     flexHideIt([contentImgBigDiv]);
     flexShowIt([contentTextTitleDiv]);
-    headerContentContainer.style.background = "var(--background-main)";
+    // headerContentContainer.style.background = "var(--background-main)";
   } else if (btnMuffin.style.display === "none") {
     flexHideIt([contentTextTitleDiv]);
     flexShowIt([contentImgBigDiv]);
-    headerContentContainer.style.background = "var(--standard-black)";
+    // headerContentContainer.style.background = "var(--standard-black)";
   }
 }
 
@@ -103,6 +103,7 @@ export function createCardItems(cardId, cardTitle, cardLink, cardImgSrc, cardBlu
       id: `title-${cardId}`,
       class: "card-title",
       href: cardLink,
+      target: "_blank",
     },
     cardTitle
   );

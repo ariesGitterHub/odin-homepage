@@ -185,7 +185,7 @@ header {
   justify-content: center;
   /* margin: var(--margin-master); */
 
-  /* background: var(--background-main); */
+
     background: var(--standard-black);
    border-radius: var(--border-radius-master);
 
@@ -423,7 +423,7 @@ padding: .25rem;
   .card-title{
     color: var(--explosion-gold);
     font-family: var(--font-title);
-    font-size: 1.75rem;
+    font-size: 1.6rem;
    padding: .25rem;
   }
 
