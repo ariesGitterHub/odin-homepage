@@ -171,13 +171,16 @@ export function createHeader() {
     class: "img-small",
   });
 
-  header.append(
-    // titleText, 
-    headerContainer);
-  headerContainer.append(
-    titleText,
-    headerContentContainer
-    // headerBtnContainer
+  header
+    .append(
+    // titleText,
+    // headerContainer,
+      titleText,
+      headerContentContainer
+  // headerContainer.append(
+  //   titleText,
+  //   headerContentContainer
+  //   // headerBtnContainer
   );
 
   headerContentContainer.append(
@@ -186,9 +189,14 @@ export function createHeader() {
     headerBtnContainer
   );
   contentImgBigDiv.append(imgFullMMM);
-  contentTextTitleDiv.append(contentTitleDiv, contentTextDiv, contactInfoDiv);
+  contentTextTitleDiv.append(
+    contentTitleDiv,
+    // contentTextDiv,
+    contentText,
+    contactInfoDiv
+    );
   contentTitleDiv.append(contentTitleImg, contentTitle);
-  contentTextDiv.append(contentText);
+  // contentTextDiv.append(contentText);
   contactInfoDiv.append(
     imgContactEmail,
     contactEmail,
@@ -234,7 +242,7 @@ export function createMain() {
     "Weathervane",
     "https://ariesgitterhub.github.io/odin-weather-app/",
     screenshotWeathervane,
-    "My first use of an API set up, this weather app utilizes worldwide weather data from the Visual Crossing API. It is also an app that I use daily."
+    "My first use of an API call set up, this weather app utilizes worldwide weather data from the Visual Crossing API. It is also an app that I use daily."
   );
 
   const todoApp = createCardItems(
@@ -242,7 +250,7 @@ export function createMain() {
     "Task King",
     "https://ariesgitterhub.github.io/odin-todo-list/",
     screenshotTaskKing,
-    "This to-do list app incorporates the uses of class generated objects, localStorage, and the date-fns library."
+    "This to-do list application incorporates the use of class generated objects, localStorage, and the date-fns library."
   );
 
   const restaurantApp = createCardItems(
@@ -250,7 +258,7 @@ export function createMain() {
     "The Hidden Garden",
     "https://ariesgitterhub.github.io/odin-restaurant-page/",
     screenshotTheHiddenGarden,
-    "This restaurant page app for a fictional bookstore cafe was my introduction to webpack, npm, and ES6 modules."
+    "This restaurant page site is for a fictional bookstore cafe; it was my introduction to webpack, npm, and ES6 modules."
   );
 
   const tictactoeApp = createCardItems(
@@ -266,7 +274,7 @@ export function createMain() {
     "MyReadList",
     "https://ariesgitterhub.github.io/odin-book-library/",
     screenshotMyReadList,
-    "This library app opened my brain up the world of the object design pattern and the use of a cool technique, the data-attribute."
+    "This library app opened my brain up the world of the object design pattern, as well as the use of a cool technique: the data-attribute."
   );
 
   const dashboardApp = createCardItems(
@@ -274,7 +282,7 @@ export function createMain() {
     "myDashboard",
     "https://ariesgitterhub.github.io/odin-admin-dashboard/",
     screenshotMyDashboard,
-    "This project, showing a a mock-up of an admin-dashboard, highlights early lessons on the use of flex and grid layouts."
+    "This project, showing a mock-up of an admin-dashboard, highlights early lessons on the CSS essentials of flex and grid."
   );
 
   const signupApp = createCardItems(
@@ -303,7 +311,7 @@ export function createMain() {
 
     const rpsApp = createCardItems(
       "rps",
-      "Wu Xing Roshambo",
+      "Wu-Xing Roshambo",
       "https://ariesgitterhub.github.io/odin-rock-paper-scissors/",
       screenshotWuXingRoshambo,
       "This is my take on the game 'Rock, Paper, Scissors.' This was my first time coding something that required game logic to determine outcomes. Not mobile ready."
@@ -314,7 +322,7 @@ export function createMain() {
           "Stupid Sound Machine",
           "https://scintillating-muffin-134894.netlify.app/",
           screenshotStupidSoundMachine,
-          "An early app that I created for fun during this long coding journey. This app has a lot of humorous 'local pub conversation utility.'"
+          "An early app that I created for fun, which also has a lot of humorous 'local pub conversation utility.'"
         );
 
   
@@ -323,7 +331,7 @@ export function createMain() {
           "Quote Generator",
           "https://whimsical-banoffee-187bf5.netlify.app/",
           screenshotStarSignQuoteGenerator,
-          "This is the first real app that I deployed (using React too!). This was very early days in learning to code and I was definitely in the deep end, treading water."
+          "This is the first real app that I deployed. This was very early days in learning to code and I was in the deep end of the pool, treading water."
         );
 
   // https://ariesgitterhub.github.io/odin-rock-paper-scissors/
