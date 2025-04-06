@@ -64,7 +64,7 @@ export default {
     new HtmlWebpackPlugin({
       template: "./src/index.html", // Path to your source HTML file
       filename: "index.html", // Output filename (dist/index.html)
-      favicon: "./src/assets/muffinFavicon.svg", // Path to your favicon
+      favicon: "./src/assets/muffinFavIcon.svg", // Path to your favicon
     }),
   ],
 };

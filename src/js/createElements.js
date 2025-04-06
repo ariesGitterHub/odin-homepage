@@ -1,5 +1,6 @@
 import { createElement, createImg } from "./functionTemplates.js";
 import { getElements } from "./domQueries.js";
+import svgMuffinFavIcon from "../assets/muffinFavIcon.svg";
 import svgFullMMM from "../assets/fullMMM.svg";
 import svgMuffin from "../assets/muffinLogo.svg";
 import svgMug from "../assets/mugLogo.svg";
@@ -360,4 +361,29 @@ export function createMain() {
     ssqgApp
     // testCase2,
   );
+}
+
+export function createFooter() {
+  const { footer } = getElements();
+
+
+  const footerContentContainer = createElement("div", {
+    id: "footer-content-container",
+  });
+
+    const imgFooterIcon = createImg({
+      id: "img-footer-icon",
+      src: svgMuffinFavIcon,
+      alt: "Mad Muffin Man logo.",
+      // class: "img-small",
+    });
+
+      const footerText = createElement("p", {
+        id: "footer-text",
+        // class: "normal-text",
+      }, "A Mad Muffin Man Design, © 2025");
+
+      footer.append(footerContentContainer);
+      footerContentContainer.append(imgFooterIcon, footerText)
+
 }
