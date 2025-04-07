@@ -227,14 +227,14 @@ header, #header-container {
 }
 
 #contact-info-div {
-  align-items: center;
-  justify-content: space-evenly;
+  /* align-items: center; */
+  /* justify-content: space-around; */
   /* gap: var(--gap-master); */
 }
 
 .img-contact {
   height: auto;
-  width: 2rem;
+  width: 2.125rem;
 }
 
 #contact-email {
