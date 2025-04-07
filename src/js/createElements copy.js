@@ -102,22 +102,16 @@ export function createHeader() {
   const btnMuffin = createElement("button", {
     id: "btn-muffin",
     class: "btn",
-    ariaLabel: 
-      "Button with an image of a deranged looking muffin, which reverts the header section back to a cartoon image of the Mad Muffin Man at his computer desk.",
   });
 
   const btnMug = createElement("button", {
     id: "btn-mug",
     class: "btn",
-    ariaLabel:
-      "Button with an image of a mug, which changes the main header section from a cartoon image to brief information about me, the Mad Muffin Man.",
   });
 
   const btnPhone = createElement("button", {
     id: "btn-phone",
     class: "btn",
-    ariaLabel:
-      "Button with an image of a snart phone, which changes the main header section from a cartoon image to contact information for the Mad Muffin Man.",
   });
 
   const imgFullMMMReverse = createImg({
@@ -192,7 +186,7 @@ export function createMain() {
   const battleshipApp = createCardItems(
     "battleship",
     "Battleship: WWII",
-    "https://ariesgitterhub.github.io/odin-battleship/",
+    "https://myGitHub.github.io/odin-battleship/",
     screenshotBattleshipWWII,
     "This is my own variant of the famous electronic board game, Battleship. This code was my first foray into Test Driven Development (TDD)."
   );
@@ -200,7 +194,7 @@ export function createMain() {
   const weatherApp = createCardItems(
     "weather",
     "Weathervane",
-    "https://ariesgitterhub.github.io/odin-weather-app/",
+    "https://myGitHub.github.io/odin-weather-app/",
     screenshotWeathervane,
     "My first use of an API call set up, this weather app utilizes worldwide weather data from the Visual Crossing API. It is also an app that I use daily."
   );
@@ -208,7 +202,7 @@ export function createMain() {
   const todoApp = createCardItems(
     "todo",
     "Task King",
-    "https://ariesgitterhub.github.io/odin-todo-list/",
+    "https://myGitHub.github.io/odin-todo-list/",
     screenshotTaskKing,
     "This to-do list application incorporates the use of class generated objects, localStorage, and the date-fns library."
   );
@@ -216,7 +210,7 @@ export function createMain() {
   const restaurantApp = createCardItems(
     "restaurant",
     "The Hidden Garden",
-    "https://ariesgitterhub.github.io/odin-restaurant-page/",
+    "https://myGitHub.github.io/odin-restaurant-page/",
     screenshotTheHiddenGarden,
     "This restaurant page site is for a fictional bookstore cafe; it was my introduction to webpack, npm, and ES6 modules."
   );
@@ -224,7 +218,7 @@ export function createMain() {
   const tictactoeApp = createCardItems(
     "tictactoe",
     "Tic-Tac-Zodiac",
-    "https://ariesgitterhub.github.io/odin-tic-tac-toe/",
+    "https://myGitHub.github.io/odin-tic-tac-toe/",
     screenshotTicTacZodiac,
     "A simple game that served as my intro to factory functions, closures, and new ideas on building code from the inside out."
   );
@@ -232,7 +226,7 @@ export function createMain() {
   const libraryApp = createCardItems(
     "library",
     "MyReadList",
-    "https://ariesgitterhub.github.io/odin-book-library/",
+    "https://myGitHub.github.io/odin-book-library/",
     screenshotMyReadList,
     "This library app opened my brain up the world of the object design pattern, as well as the use of a cool technique: the data-attribute."
   );
@@ -240,7 +234,7 @@ export function createMain() {
   const dashboardApp = createCardItems(
     "dashboard",
     "myDashboard",
-    "https://ariesgitterhub.github.io/odin-admin-dashboard/",
+    "https://myGitHub.github.io/odin-admin-dashboard/",
     screenshotMyDashboard,
     "This project, showing a mock-up of an admin-dashboard, highlights early lessons on the CSS essentials of flex and grid."
   );
@@ -248,7 +242,7 @@ export function createMain() {
   const signupApp = createCardItems(
     "signup",
     "Lecture Event",
-    "https://ariesgitterhub.github.io/odin-sign-up-form/",
+    "https://myGitHub.github.io/odin-sign-up-form/",
     screenshotMULectureEvent,
     "This mock-up form for a fictional lecture event employs form field basics and controls, as well as front-end input validation."
   );
@@ -256,7 +250,7 @@ export function createMain() {
   const calculatorApp = createCardItems(
     "calculator",
     "Calculator",
-    "https://ariesgitterhub.github.io/odin-calculator/",
+    "https://myGitHub.github.io/odin-calculator/",
     screenshotCalculator,
     "A not-so-basic calculator that has buttons for getting Roman Numerals, factorials, percents in decimals, and one button for answering 'the meaning of life.'"
   );
@@ -264,7 +258,7 @@ export function createMain() {
   const easApp = createCardItems(
     "eas",
     "Etch-a-Dungeon",
-    "https://ariesgitterhub.github.io/odin-etch-a-sketch/",
+    "https://myGitHub.github.io/odin-etch-a-sketch/",
     screenshotEtchADungeon,
     "An early project that was meant to be a simple Etch-A-Sketch demo; it morphed into a working dungeon-building app. Best viewed on desktop or laptop with a mouse."
   );
@@ -272,7 +266,7 @@ export function createMain() {
   const rpsApp = createCardItems(
     "rps",
     "Wu-Xing Roshambo",
-    "https://ariesgitterhub.github.io/odin-rock-paper-scissors/",
+    "https://myGitHub.github.io/odin-rock-paper-scissors/",
     screenshotWuXingRoshambo,
     "This is my take on the game 'Rock, Paper, Scissors.' This was my first time coding something that required game logic to determine outcomes. Not mobile ready."
   );
@@ -280,7 +274,7 @@ export function createMain() {
   const ssmApp = createCardItems(
     "ssm",
     "Stupid Sound Machine",
-    "https://scintillating-muffin-134894.netlify.app/",
+    "https://stupidSoundMachine.netlify.app/",
     screenshotStupidSoundMachine,
     "An early app that I created for fun, which also has a lot of humorous 'local pub conversation utility.'"
   );
@@ -288,7 +282,7 @@ export function createMain() {
   const ssqgApp = createCardItems(
     "ssqg",
     "Quote Generator",
-    "https://whimsical-banoffee-187bf5.netlify.app/",
+    "https://starSignQuoteGenerator.netlify.app/",
     screenshotStarSignQuoteGenerator,
     "This is the first real app that I deployed. This was very early days in learning to code and I was in the deep end of the pool, treading water."
   );

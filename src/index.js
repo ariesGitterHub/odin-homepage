@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   createHeader();
   createMain();
   createFooter();
-  const { imgBig, imgFullMMM, imgFullMMMReverse, btnMuffin, btnMug, btnPhone } = getElements();
+  const { imgBig, imgFullMMM, imgFullMMMReverse, btnMuffin, btnMug, btnPhone } =
+    getElements();
 
   imgBig.forEach((img) => {
     img.addEventListener("click", () => {

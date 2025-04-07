@@ -25,15 +25,13 @@ export function flexHideIt(elements) {
 }
 
 export function handleBtnClicks() {
-  const { headerContentContainer, contentImgBigDiv, contentTextTitleDiv, btnMuffin } = getElements();
+  const { contentImgBigDiv, contentTextTitleDiv, btnMuffin } = getElements();
   if (btnMuffin.style.display !== "none") {
     flexHideIt([contentImgBigDiv]);
     flexShowIt([contentTextTitleDiv]);
-    // headerContentContainer.style.background = "var(--background-main)";
   } else if (btnMuffin.style.display === "none") {
     flexHideIt([contentTextTitleDiv]);
     flexShowIt([contentImgBigDiv]);
-    // headerContentContainer.style.background = "var(--standard-black)";
   }
 }
 
@@ -51,7 +49,6 @@ export function handleTextContent() {
   const {
     contentTitle,
     contentTitleImg,
-    // contentTextDiv,
     contentText,
     contactInfoDiv,
     contactEmail,
@@ -66,8 +63,7 @@ export function handleTextContent() {
     btnPhone.style.display !== "none"
   ) {
     flexHideIt([contactInfoDiv]);
-    // flexShowIt([contentTextDiv]);
-      flexShowIt([contentText]);
+    flexShowIt([contentText]);
     addMessage(contentTitle, "ABOUT ME");
     contentTitleImg.src = svgMug;
     addMessage(
@@ -80,21 +76,24 @@ export function handleTextContent() {
     btnMug.style.display !== "none" &&
     btnPhone.style.display === "none"
   ) {
-    // flexHideIt([contentTextDiv]);
     flexHideIt([contentText]);
     flexShowIt([contactInfoDiv]);
     addMessage(contentTitle, "CONTACT");
     contentTitleImg.src = svgPhone;
     addMessage(contactEmail, "madmuffinmandesign@gmail.com");
-    // contactEmail.style.textAlign = "center";
     addMessage(contactPhone, "1-555-8MUFFIN");
   } else {
     clearMessage();
   }
 }
 
-
-export function createCardItems(cardId, cardTitle, cardLink, cardImgSrc, cardBlurb) {
+export function createCardItems(
+  cardId,
+  cardTitle,
+  cardLink,
+  cardImgSrc,
+  cardBlurb
+) {
   const card = createElement("div", {
     id: `card-${cardId}`,
     class: "card",
@@ -106,18 +105,11 @@ export function createCardItems(cardId, cardTitle, cardLink, cardImgSrc, cardBlu
       id: `title-${cardId}`,
       class: "card-title",
       href: cardLink,
+      ariaLabel: `Visit ${cardTitle} project page`,
       target: "_blank",
     },
     cardTitle
   );
-
-  // const iframe = createElement(
-  //   "iframe",
-  //   {
-  //     id: `iframe-${cardId}`,
-  //     class: "card-link",
-  //     src: cardLink,
-  //   });
 
   const screenshot = createImg({
     id: `img-screenshot-${cardId}`,
@@ -135,13 +127,6 @@ export function createCardItems(cardId, cardTitle, cardLink, cardImgSrc, cardBlu
     cardBlurb
   );
 
-  // return {
-  //   card,
-  //   title,
-  //   iframe,
-  //   blurb
-  // }
-
   function createCards(card, title, screenshot, blurb) {
     card.append(title, screenshot, blurb);
     return card;
@@ -149,7 +134,6 @@ export function createCardItems(cardId, cardTitle, cardLink, cardImgSrc, cardBlu
 
   return createCards(card, title, screenshot, blurb);
 }
-
 
 function createAudioElement(src) {
   const audio = new Audio(src);

@@ -16,6 +16,9 @@ export function createElement(tagName, attributes = {}, text = "") {
     } else if (key.startsWith("data-")) {
       // For 'data-*' attributes
       element.setAttribute(key, value);
+    } else if (key === "ariaLabel") {
+      // If the attribute is 'ariaLabel', convert it to 'aria-label' and set it
+      element.setAttribute("aria-label", value);
     } else {
       element.setAttribute(key, value);
     }
@@ -24,19 +27,20 @@ export function createElement(tagName, attributes = {}, text = "") {
   if (text) {
     element.innerText = text;
   }
+
   return element;
 }
 
 /**
  * Creates an HTML <img> element with specified attributes.
- * 
+ *
  * @param {Object} [attributes={}] - An object containing attributes to apply to the <img> element. Supported attributes include:
  *                                    - 'id': The id of the image.
  *                                    - 'src': The source URL of the image.
  *                                    - 'alt': The alt text for the image.
  *                                    - 'data-*': Custom data attributes (e.g., data-selected).
  *                                    - Other standard attributes for an <img> element.
- * 
+ *
  * @returns {HTMLImageElement} The created <img> element.
  */
 
@@ -58,5 +62,6 @@ export function createImg(attributes = {}) {
       img.setAttribute(key, value);
     }
   }
+
   return img;
 }

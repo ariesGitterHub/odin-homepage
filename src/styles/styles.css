@@ -7,6 +7,7 @@
   font-style: normal;
 }
 
+/* For the Montserrat font I used Google Fonts since it was available */
 /* @font-face {
   font-family: "Montserrat";
   src: url("../assets/montserratRegular.ttf") format("truetype");
@@ -38,21 +39,13 @@
 :root {
   /* Colors */
   --circle-red: #bd4949;
-  --wrapper-red: #8b1818;
-  --wrapper-pink: #e57676;
   --explosion-gold: #edbd58;
   --mug-blue: #898d9b;
-  --shadow-blue: #666a77;
   --hoodie-blue: #484662;
-  --hoodie-blue-trans: #4846627c;
   --desk-brown: #4d4a47;
-  --actual-black: #000000;
   --standard-black: #0b0806;
-  --standard-black-trans: #0b080600;
   --standard-white: #d1c5b6;
   --computer-grey: #808080;
-  --muffin-brown: #563f3f;
-  --nut-brown: #a38686;
 
   --box-shadow: 0 5px 10px var(--standard-black);
   --background-main: linear-gradient(
@@ -73,7 +66,7 @@
     var(--desk-brown)
   );
 
-    --background-gold: linear-gradient(
+  --background-gold: linear-gradient(
     var(--linear-gradient-deg),
     var(--standard-black),
     var(--explosion-gold)
@@ -98,13 +91,15 @@
   --margin-master: 0.25rem; /* Initial Size: 0.25rem */
   --padding-master: 0.25rem; /* Initial Size: 0.25rem */
   --gap-master: 0.25rem; /* Initial Size: 0.25rem */
-  --content-size: 22rem;  /* Initial Size: 22rem */
+  --content-size: 22rem; /* Initial Size: 22rem */
   --container-size: 28rem; /* Initial Size: 28rem */
   --card-size: 28rem; /* Initial Size: 28rem */
   --img-title: 7rem; /* Initial Size: 7rem */
   --img-btn: 6rem; /* Initial Size: 6rem */
   --card-screenshot-size: 15rem; /* Initial Size: 15rem */
-  --footer-icon-size: calc(var(--font-size-normal) + 2rem); /* Initial Size: 3rem */
+  --footer-icon-size: calc(
+    var(--font-size-normal) + 2rem
+  ); /* Initial Size: 3rem */
 }
 
 * {
@@ -136,10 +131,12 @@ body {
   line-height: var(--line-height-master);
 }
 
-body {}
+body {
+}
 
 /* HEADER */
-header, #header-container {
+header,
+#header-container {
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -181,20 +178,27 @@ header, #header-container {
 
 #content-img-big-div {
   display: flex;
+    transition: transform 0.5s ease;
 }
 
-
-.img-big {
-  height: auto;
-  width: var(--content-size);
-  transition: transform 0.5s ease;
-}
-
-.img-big:hover {
+#content-img-big-div:hover {
   background: var(--background-header);
   border-radius: 50%;
   box-shadow: var(--glow);
   transform: scale(var(--scale-big));
+}
+
+.img-big {
+  height: auto;
+  width: var(--content-size);
+  /* transition: transform 0.5s ease; */
+}
+
+.img-big:hover {
+  /* background: var(--background-header);
+  border-radius: 50%;
+  box-shadow: var(--glow);
+  transform: scale(var(--scale-big)); */
 }
 
 #img-full-MMM-reverse {
@@ -203,7 +207,6 @@ header, #header-container {
 
 #img-full-MMM {
   display: none;
-  /* transform: translateX(0.275rem) translateY(-0.6rem); */
 }
 
 /* Starts as display: none */
@@ -243,23 +246,17 @@ header, #header-container {
   justify-content: center;
 }
 
-#contact-info-div {
-  /* align-items: center; */
-  /* justify-content: space-around; */
-  /* gap: var(--gap-master); */
-}
-
 .img-contact {
   height: auto;
   width: 2.125rem;
 }
 
 #contact-email {
-margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 #content-text {
-  padding: 0 .25rem 0 1rem;
+  padding: 0 0.25rem 0 1rem;
 }
 
 .normal-text {
@@ -286,7 +283,7 @@ button {
   justify-content: center;
   background-color: var(--explosion-gold);
   border: var(--border-style);
-  border-color: var(--standard-black) ;
+  border-color: var(--standard-black);
   border-radius: 50%;
   font-family: var(--font-title);
   padding: var(--padding-master);
@@ -298,9 +295,11 @@ button {
   display: none;
 }
 
-#btn-mug {}
+#btn-mug {
+}
 
-#btn-phone {}
+#btn-phone {
+}
 
 button:hover {
   background: var(--background-hover);
@@ -385,7 +384,7 @@ main {
 }
 
 .card-screenshot {
-  height:var(--card-screenshot-size);
+  height: var(--card-screenshot-size);
   width: var(--card-screenshot-size);
   background-color: var(--computer-grey);
   border-radius: 1.125rem;
@@ -435,22 +434,22 @@ footer {
 #img-footer-icon {
   height: auto;
   width: var(--footer-icon-size);
-    margin: var(--margin-master);
+  margin: var(--margin-master);
 }
 
 #footer-text {
   color: var(--standard-white);
   font-family: var(--font-title);
   font-size: var(--font-size-normal);
-      margin: var(--margin-master);
+  margin: var(--margin-master);
 }
 
 /* MEDIA QUERIES */
 @media (min-width: 500px) {
   :root {
-  --font-size-master: 16px; /* Initial Size: 14px */
-  --line-height-master: 1.5; /* Initial: 1.25 */
-   --font-size-title: 2.25rem; /* Initial Size: 1.85rem */
+    --font-size-master: 16px; /* Initial Size: 14px */
+    --line-height-master: 1.5; /* Initial: 1.25 */
+    --font-size-title: 2.25rem; /* Initial Size: 1.85rem */
   }
 }
 
@@ -467,43 +466,44 @@ footer {
 
   .card {
     height: calc(var(--card-size) + 6rem);
-    width: var(--card-size);  
+    width: var(--card-size);
   }
 }
 
 @media (min-width: 650px) {
   :root {
-  --font-size-title: 2.85rem; /* Initial Size: 1.85rem */
-  --font-size-sub-title: 1.75rem; /* Initial Size: 1.5rem */
-  --font-size-normal: 1.125rem; /* Initial Size: 1rem */
-  --margin-master: 0.75; /* Initial Size: 0.25rem */
-  --padding-master: 0.75rem; /* Initial Size: 0.25rem */
-  --gap-master: .75rem; /* Initial Size: 0.25rem */
-  --content-size: 25.5rem;  /* Initial Size: 22rem */
-  --container-size: 30rem; /* Initial Size: 28rem */
-  --card-size: 25.5rem; /* Initial Size: 28rem */
-  --img-title: 8.5rem; /* Initial Size: 7rem */
-  --img-btn: 7.5rem; /* Initial Size: 6rem */
-  --card-screenshot-size: 17rem; /* Initial Size: 15rem */
-    --footer-icon-size: calc(var(--font-size-normal) + 4rem); /* Initial Size: 3rem */
+    --font-size-title: 2.85rem; /* Initial Size: 1.85rem */
+    --font-size-sub-title: 1.75rem; /* Initial Size: 1.5rem */
+    --font-size-normal: 1.125rem; /* Initial Size: 1rem */
+    --margin-master: 0.75; /* Initial Size: 0.25rem */
+    --padding-master: 0.75rem; /* Initial Size: 0.25rem */
+    --gap-master: 0.75rem; /* Initial Size: 0.25rem */
+    --content-size: 25.5rem; /* Initial Size: 22rem */
+    --container-size: 30rem; /* Initial Size: 28rem */
+    --card-size: 25.5rem; /* Initial Size: 28rem */
+    --img-title: 8.5rem; /* Initial Size: 7rem */
+    --img-btn: 7.5rem; /* Initial Size: 6rem */
+    --card-screenshot-size: 17rem; /* Initial Size: 15rem */
+    --footer-icon-size: calc(
+      var(--font-size-normal) + 4rem
+    ); /* Initial Size: 3rem */
   }
 
-    .card {
+  .card {
     height: calc(var(--card-size) + 8rem);
-    width: var(--card-size);  
+    width: var(--card-size);
   }
 }
 
 @media (min-width: 1000px) {
   :root {
-  --font-size-title: 3.5rem; /* Initial Size: 1.85rem */
-  --font-size-sub-title: 2rem; /* Initial Size: 1.5rem */
-  --content-size: 28rem;  /* Initial Size: 22rem */
-  --container-size: 32rem; /* Initial Size: 28rem */
-  --card-size: 28rem; /* Initial Size: 28rem */
-  --img-title: 9rem; /* Initial Size: 7rem */
-  --img-btn: 8rem; /* Initial Size: 6rem */
-  --card-screenshot-size: 18rem; /* Initial Size: 15rem */
+    --font-size-title: 3.5rem; /* Initial Size: 1.85rem */
+    --font-size-sub-title: 2rem; /* Initial Size: 1.5rem */
+    --content-size: 28rem; /* Initial Size: 22rem */
+    --container-size: 32rem; /* Initial Size: 28rem */
+    --card-size: 28rem; /* Initial Size: 28rem */
+    --img-title: 9rem; /* Initial Size: 7rem */
+    --img-btn: 8rem; /* Initial Size: 6rem */
+    --card-screenshot-size: 18rem; /* Initial Size: 15rem */
   }
 }
-
