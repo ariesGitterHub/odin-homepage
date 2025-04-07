@@ -307,7 +307,7 @@ export function createMain() {
           "Etch-a-Dungeon",
           "https://ariesgitterhub.github.io/odin-etch-a-sketch/",
       screenshotEtchADungeon,
-      "An early project that was meant to be a simple Etch-A-Sketch demo; it morphed into something more, namely a working dungeon building app. Not mobile ready."
+      "An early project that was meant to be a simple Etch-A-Sketch demo; it morphed into a working dungeon-building app. Best viewed on desktop or laptop with a mouse."
     );
 
     const rpsApp = createCardItems(
