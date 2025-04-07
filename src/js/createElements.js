@@ -2,6 +2,7 @@ import { createElement, createImg } from "./functionTemplates.js";
 import { getElements } from "./domQueries.js";
 import svgMuffinFavIcon from "../assets/muffinFavIcon.svg";
 import svgFullMMM from "../assets/fullMMM.svg";
+import svgFullMMMReverse from "../assets/fullMMMReverse.svg";
 import svgMuffin from "../assets/muffinLogo.svg";
 import svgMug from "../assets/mugLogo.svg";
 import svgPhone from "../assets/phoneLogo.svg";
@@ -151,6 +152,13 @@ export function createHeader() {
     class: "img-big",
   });
 
+  const imgFullMMMReverse = createImg({
+    id: "img-full-MMM-reverse",
+    src: svgFullMMMReverse,
+    alt: "The Mad Muffin Man busy at work at his computer desk in a dimly lit office late at night.",
+    class: "img-big",
+  });
+
   const imgMuffin = createImg({
     id: "img-muffin",
     src: svgMuffin,
@@ -189,7 +197,7 @@ export function createHeader() {
     contentTextTitleDiv,
     headerBtnContainer
   );
-  contentImgBigDiv.append(imgFullMMM);
+  contentImgBigDiv.append(imgFullMMM, imgFullMMMReverse);
   contentTextTitleDiv.append(
     contentTitleDiv,
     // contentTextDiv,
@@ -300,7 +308,7 @@ export function createMain() {
       "https://ariesgitterhub.github.io/odin-calculator/",
       screenshotCalculator,
       "A not-so-basic calculator that has buttons for getting Roman Numerals, factorials, percents in decimals, and one button for answering 'the meaning of life.'"
-    );
+  );
 
         const easApp = createCardItems(
           "eas",

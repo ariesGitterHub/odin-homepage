@@ -6,10 +6,12 @@ export function getElements() {
 
     // imgFullMMM: document.querySelector("#img-full-MMM"),
 
-
     headerContentContainer: document.querySelector("#header-content-container"),
 
     contentImgBigDiv: document.querySelector("#content-img-big-div"),
+    imgBig: document.querySelectorAll(".img-big"),
+    imgFullMMM: document.querySelector("#img-full-MMM"),
+    imgFullMMMReverse: document.querySelector("#img-full-MMM-reverse"),
     contentTextTitleDiv: document.querySelector("#content-text-title-div"),
     contentTitle: document.querySelector("#content-title"),
     contentTitleImg: document.querySelector("#content-title-img"),

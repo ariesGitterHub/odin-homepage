@@ -13,7 +13,20 @@ document.addEventListener("DOMContentLoaded", () => {
   createHeader();
   createMain();
   createFooter();
-  const { btnMuffin, btnMug, btnPhone } = getElements();
+  const { imgBig, imgFullMMM, imgFullMMMReverse, btnMuffin, btnMug, btnPhone } = getElements();
+
+  imgBig.forEach((img) => {
+    img.addEventListener("click", () => {
+      mp3Click();
+      if (imgFullMMMReverse.style.display !== "none") {
+        flexHideIt([imgFullMMMReverse]);
+        flexShowIt([imgFullMMM]);
+      } else {
+        flexHideIt([imgFullMMM]);
+        flexShowIt([imgFullMMMReverse]);
+      }
+    });
+  });
 
   btnMuffin.addEventListener("click", () => {
     mp3Click();
