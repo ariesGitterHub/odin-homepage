@@ -6,6 +6,7 @@ import {
   flexHideIt,
   handleBtnClicks,
   handleTextContent,
+  mp3Click,
 } from "./js/functions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,12 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const { btnMuffin, btnMug, btnPhone } = getElements();
 
   btnMuffin.addEventListener("click", () => {
+    mp3Click();
     flexHideIt([btnMuffin]);
     flexShowIt([btnMug, btnPhone]);
     handleBtnClicks();
   });
 
   btnMug.addEventListener("click", () => {
+    mp3Click();
     flexHideIt([btnMug]);
     flexShowIt([btnMuffin, btnPhone]);
     handleBtnClicks();
@@ -28,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   btnPhone.addEventListener("click", () => {
+    mp3Click();
     flexHideIt([btnPhone]);
     flexShowIt([btnMuffin, btnMug]);
     handleBtnClicks();

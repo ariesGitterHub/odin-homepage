@@ -2,6 +2,7 @@ import { getElements } from "./domQueries.js";
 import { createElement, createImg } from "./functionTemplates.js";
 import svgMug from "../assets/mugLogo2.svg";
 import svgPhone from "../assets/phoneLogo2.svg";
+import btnClick from "../assets/soundClick.mp3";
 
 export function flexShowIt(elements) {
   // Ensure elements is an array or NodeList
@@ -149,3 +150,22 @@ export function createCardItems(cardId, cardTitle, cardLink, cardImgSrc, cardBlu
   return createCards(card, title, screenshot, blurb);
 }
 
+
+function createAudioElement(src) {
+  const audio = new Audio(src);
+  audio.preload = "auto";
+  return audio;
+}
+
+function playAudio(audio) {
+  audio.currentTime = 0;
+  audio.play().catch((error) => {
+    console.error("Audio playback failed:", error);
+  });
+}
+
+const click = createAudioElement(btnClick);
+
+export function mp3Click() {
+  playAudio(click);
+}
