@@ -7,14 +7,14 @@ import {
   handleBtnClicks,
   handleTextContent,
   mp3Click,
+  // setDisplay, // See functions.js, for note on this
 } from "./js/functions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   createHeader();
   createMain();
   createFooter();
-  const { imgBig, imgFullMMM, imgFullMMMReverse, btnMuffin, btnMug, btnPhone } =
-    getElements();
+  const { imgBig, imgFullMMM, imgFullMMMReverse, btnMuffin, btnMug, btnPhone } = getElements();
 
   imgBig.forEach((img) => {
     img.addEventListener("click", () => {

@@ -102,35 +102,35 @@ export function createHeader() {
   const btnMuffin = createElement("button", {
     id: "btn-muffin",
     class: "btn",
-    ariaLabel: 
-      "Button with an image of a deranged looking muffin, which reverts the header section back to a cartoon image of the Mad Muffin Man at his computer desk.",
+    ariaLabel:
+      "Button with an image of a deranged looking muffin: this reverts the header section back to a cartoon image of the Mad Muffin Man at his computer desk.",
   });
 
   const btnMug = createElement("button", {
     id: "btn-mug",
     class: "btn",
     ariaLabel:
-      "Button with an image of a mug, which changes the main header section from a cartoon image to brief information about me, the Mad Muffin Man.",
+      "Button with an image of a mug: this changes the main header section from a cartoon image to brief information about me, the infamous Mad Muffin Man.",
   });
 
   const btnPhone = createElement("button", {
     id: "btn-phone",
     class: "btn",
     ariaLabel:
-      "Button with an image of a snart phone, which changes the main header section from a cartoon image to contact information for the Mad Muffin Man.",
+      "Button with an image of a smart phone: this changes the main header section from a cartoon image to contact information for the Mad Muffin Man.",
   });
 
   const imgFullMMMReverse = createImg({
     id: "img-full-MMM-reverse",
     src: svgFullMMMReverse,
-    alt: "The Mad Muffin Man busy at work at his computer desk in a dimly lit office late at night.",
+    alt: "The Mad Muffin Man is busy at work at his computer desk in a dimly lit office late at night.",
     class: "img-big",
   });
 
   const imgFullMMM = createImg({
     id: "img-full-MMM",
     src: svgFullMMM,
-    alt: "Cartoonish image of a computer programmer with a giant muffin for head.",
+    alt: "Cartoonish image of a computer programmer with a giant, weird looking muffin for a head.",
     class: "img-big",
   });
 
@@ -144,14 +144,14 @@ export function createHeader() {
   const imgMug = createImg({
     id: "img-mug",
     src: svgMug,
-    alt: "Cartoonish image of steaming mug of coffee labeled with the letters 'M3'.",
+    alt: "Cartoonish image of a coffee mug labeled with the letters 'M3'.",
     class: "img-small",
   });
 
   const imgPhone = createImg({
     id: "img-phone",
     src: svgPhone,
-    alt: "Cartoonish image of smart phone.",
+    alt: "Cartoonish image of smart phone that appears to be calling the Mad Muffin Man.",
     class: "img-small",
   });
 
@@ -218,7 +218,7 @@ export function createMain() {
     "The Hidden Garden",
     "https://ariesgitterhub.github.io/odin-restaurant-page/",
     screenshotTheHiddenGarden,
-    "This restaurant page site is for a fictional bookstore cafe; it was my introduction to webpack, npm, and ES6 modules."
+    "This restaurant site is for a fictional bookstore cafe; it was my introduction to webpack, npm, and ES6 modules."
   );
 
   const tictactoeApp = createCardItems(
@@ -282,7 +282,7 @@ export function createMain() {
     "Stupid Sound Machine",
     "https://scintillating-muffin-134894.netlify.app/",
     screenshotStupidSoundMachine,
-    "An early app that I created for fun, which also has a lot of humorous 'local pub conversation utility.'"
+    "An early app that I created for fun, which also has a lot of humorous 'local pub conversation utility.' Fear the screaming goat!"
   );
 
   const ssqgApp = createCardItems(

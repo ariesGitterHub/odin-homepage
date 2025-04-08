@@ -7,31 +7,15 @@
   font-style: normal;
 }
 
-/* For the Montserrat font I used Google Fonts since it was available */
-/* @font-face {
-  font-family: "Montserrat";
-  src: url("../assets/montserratRegular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-} */
-
 /* ***** TABLE OF CONTENTS *********************************** */
 
 /* ROOT/SHARED/GLOBAL */
-/* BTN CONTROLS */
 /* HEADER */
-/* --> TITLE */
-/* --> GIF */
-/* MESSAGES */
-/* MAIN BTN CONTAINER */
-/* ALL THE VARIOUS BOARDS/ZONES/GRIDS */
-/* --> FULL-BOARDS */
-/* ----> PLAYER NUMBER TEXT */
-/* ----> PLACE SHIPS, DEPLOYMENT ZONE & TARGET ZONE */
-/* SPECIAL HOVER EFFECTS (for deployment and target zones) */
+/* -- BUTTONS */
+/* MAIN */
+/* -- PROJECT CARDS */
+/* FOOTER */
 /* MEDIA QUERIES */
-
-/* NOTE: USE <CTRL-F Key Item>, to find CSS that maintains the grids */
 
 /* ***** TABLE OF CONTENTS *********************************** */
 
@@ -131,9 +115,6 @@ body {
   line-height: var(--line-height-master);
 }
 
-body {
-}
-
 /* HEADER */
 header,
 #header-container {
@@ -178,7 +159,7 @@ header,
 
 #content-img-big-div {
   display: flex;
-    transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 #content-img-big-div:hover {
@@ -191,14 +172,6 @@ header,
 .img-big {
   height: auto;
   width: var(--content-size);
-  /* transition: transform 0.5s ease; */
-}
-
-.img-big:hover {
-  /* background: var(--background-header);
-  border-radius: 50%;
-  box-shadow: var(--glow);
-  transform: scale(var(--scale-big)); */
 }
 
 #img-full-MMM-reverse {
@@ -265,6 +238,8 @@ header,
   font-size: var(--font-size-normal);
 }
 
+/* BUTTONS */
+
 #header-btn-container {
   width: 100vw;
   display: flex;
@@ -290,17 +265,6 @@ button {
   transition: transform 0.5s ease;
 }
 
-/* Starts as display: none */
-#btn-muffin {
-  display: none;
-}
-
-#btn-mug {
-}
-
-#btn-phone {
-}
-
 button:hover {
   background: var(--background-hover);
   border-color: var(--explosion-gold);
@@ -310,6 +274,11 @@ button:hover {
 
 button:active {
   transform: scale(var(--scale-small));
+}
+
+/* Starts as display: none */
+#btn-muffin {
+  display: none;
 }
 
 .img-small {
@@ -339,6 +308,7 @@ button:active {
 }
 
 /* MAIN */
+
 main {
   height: fit-content;
   display: flex;
@@ -360,6 +330,8 @@ main {
   background: var(--standard-black);
   border-radius: var(--border-radius-master);
 }
+
+/* PROJECT CARDS */
 
 .card {
   min-height: var(--card-size);
@@ -415,6 +387,7 @@ a:hover {
 }
 
 /* FOOTER */
+
 footer {
   margin: 1rem;
 }
@@ -424,9 +397,9 @@ footer {
   width: fit-content;
   display: flex;
   flex-direction: row;
-  gap: var(--gap-master);
   align-items: center;
   justify-content: center;
+  gap: var(--gap-master);
   margin: auto;
   padding: var(--padding-master);
 }
@@ -445,33 +418,18 @@ footer {
 }
 
 /* MEDIA QUERIES */
+
 @media (min-width: 500px) {
   :root {
-    --font-size-master: 16px; /* Initial Size: 14px */
+    --font-size-master: 15px; /* Initial Size: 14px */
     --line-height-master: 1.5; /* Initial: 1.25 */
     --font-size-title: 2.25rem; /* Initial Size: 1.85rem */
   }
 }
 
-@media (min-width: 600px) {
-  #header-content-container {
-    flex-direction: row;
-    gap: var(--gap-master);
-  }
-
-  #header-btn-container {
-    width: fit-content;
-    flex-direction: column;
-  }
-
-  .card {
-    height: calc(var(--card-size) + 6rem);
-    width: var(--card-size);
-  }
-}
-
 @media (min-width: 650px) {
   :root {
+    --font-size-master: 16px; /* Initial Size: 14px */
     --font-size-title: 2.85rem; /* Initial Size: 1.85rem */
     --font-size-sub-title: 1.75rem; /* Initial Size: 1.5rem */
     --font-size-normal: 1.125rem; /* Initial Size: 1rem */
@@ -488,6 +446,15 @@ footer {
       var(--font-size-normal) + 4rem
     ); /* Initial Size: 3rem */
   }
+  #header-content-container {
+    flex-direction: row;
+    gap: var(--gap-master);
+  }
+
+  #header-btn-container {
+    width: fit-content;
+    flex-direction: column;
+  }
 
   .card {
     height: calc(var(--card-size) + 8rem);
@@ -495,9 +462,15 @@ footer {
   }
 }
 
+@media (min-width: 800px) {
+  :root {
+    --font-size-title: 3rem; /* Initial Size: 1.85rem */
+  }
+}
+
 @media (min-width: 1000px) {
   :root {
-    --font-size-title: 3.5rem; /* Initial Size: 1.85rem */
+    --font-size-title: 4rem; /* Initial Size: 1.85rem */
     --font-size-sub-title: 2rem; /* Initial Size: 1.5rem */
     --content-size: 28rem; /* Initial Size: 22rem */
     --container-size: 32rem; /* Initial Size: 28rem */

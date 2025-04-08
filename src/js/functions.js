@@ -24,6 +24,21 @@ export function flexHideIt(elements) {
   });
 }
 
+// Below, better alternative to above; BUT, I like the two above even though they aren't completely D.R.Y. per se, you can load up a bunch of queries into them at the same time and its super clean and easy to read; Keep this note for future reference.
+//
+// export function setDisplay(elements, displayStyle) {
+//   const elementsArray = Array.isArray(elements)
+//     ? elements
+//     : Array.from(elements);
+//   elementsArray.forEach((element) => {
+//     element.style.display = displayStyle;
+//   });
+// }
+//
+// E.g., usage:
+// setDisplay([contentImgBigDiv], "none");  // To hide
+// setDisplay([contentTextTitleDiv], "flex");  // To show
+
 export function handleBtnClicks() {
   const { contentImgBigDiv, contentTextTitleDiv, btnMuffin } = getElements();
   if (btnMuffin.style.display !== "none") {
@@ -105,7 +120,7 @@ export function createCardItems(
       id: `title-${cardId}`,
       class: "card-title",
       href: cardLink,
-      ariaLabel: `Visit ${cardTitle} project page`,
+      ariaLabel: `Visit ${cardTitle} project page.`,
       target: "_blank",
     },
     cardTitle
@@ -127,22 +142,43 @@ export function createCardItems(
     cardBlurb
   );
 
-  function createCards(card, title, screenshot, blurb) {
-    card.append(title, screenshot, blurb);
-    return card;
-  }
+  // function createCards(card, title, screenshot, blurb) {
+  //   card.append(title, screenshot, blurb);
+  //   return card;
+  // }
+  //
+  // return createCards(card, title, screenshot, blurb);
 
-  return createCards(card, title, screenshot, blurb);
+  card.append(title, screenshot, blurb); // Directly append elements; reminder, no need for commented out code above
+  return card;
 }
+
+// Old code, keep for reference, use code below instead
+// function createAudioElement(src) {
+//   const audio = new Audio(src);
+//   audio.preload = "auto";
+//   return audio;
+// }
+
+// function playAudio(audio) {
+//   audio.currentTime = 0;
+//   audio.play().catch((error) => {
+//     console.error("Audio playback failed:", error);
+//   });
+// }
 
 function createAudioElement(src) {
   const audio = new Audio(src);
   audio.preload = "auto";
+  audio.addEventListener("error", (error) => {
+    console.error("Error loading audio file:", error);
+  });
   return audio;
 }
 
 function playAudio(audio) {
   audio.currentTime = 0;
+  audio.pause(); // !!! Ensure audio starts from the beginning
   audio.play().catch((error) => {
     console.error("Audio playback failed:", error);
   });
