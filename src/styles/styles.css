@@ -10,6 +10,9 @@
 /* ***** TABLE OF CONTENTS *********************************** */
 
 /* ROOT/SHARED/GLOBAL */
+/* -- COLORS AND EFFECTS*/
+/* -- INITIAL SIZE KEY */
+/* -- MOUSE POINTER */
 /* HEADER */
 /* -- BUTTONS */
 /* MAIN */
@@ -21,7 +24,8 @@
 
 /* ROOT/SHARED/GLOBAL */
 :root {
-  /* Colors */
+  /* COLORS AND EFFECTS*/
+
   --circle-red: #bd4949;
   --explosion-gold: #edbd58;
   --mug-blue: #898d9b;
@@ -66,7 +70,8 @@
   --scale-big: 1.125;
   --scale-small: 0.9;
 
-  /* Initial Size Key */
+  /* INITIAL SIZE KEY */
+
   --font-size-master: 14px; /* Initial Size: 14px */
   --line-height-master: 1.25; /* Initial: 1.25 */
   --font-size-title: 1.85rem; /* Initial Size: 1.85rem */
@@ -104,6 +109,14 @@ p {
   line-height: inherit; /* Inherit line height from parent */
   text-align: inherit; /* Inherit text alignment from parent */
   color: inherit; /* Inherit text color from parent */
+}
+
+/* MOUSE POINTER  */
+
+button,
+#content-img-big-div,
+a {
+  cursor: pointer;
 }
 
 html,
