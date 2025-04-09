@@ -87,6 +87,7 @@
   --card-size: 28rem; /* Initial Size: 28rem */
   --img-title: 7rem; /* Initial Size: 7rem */
   --img-btn: 6rem; /* Initial Size: 6rem */
+  --main-subtitle-div-height: 4rem; /* Initial Size: 3rem */ 
   --card-screenshot-size: 15rem; /* Initial Size: 15rem */
   --footer-icon-size: calc(
     var(--font-size-normal) + 2rem
@@ -156,7 +157,7 @@ header,
 }
 
 #header-title-text {
-  color: var(--mug-blue);  
+  color: var(--mug-blue);
 }
 
 #header-content-container {
@@ -327,28 +328,28 @@ button:active {
 /* MAIN */
 
 main {
-  /* height: fit-content; */
-  /* display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center; */
-  /* background-color: var(--hoodie-blue); */
-  /* border-radius: var(--border-radius-master); */
-}
-
-#main-subtitle-div {
   height: fit-content;
   width: 100vw;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  /* background-color: var(--desk-brown); */
+}
+
+#main-subtitle-div {
+  height: var(--main-subtitle-div-height);
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background: var(--background-header);
-  padding: var(--padding-master); 
+  text-align: center;
 }
 
 #main-subtitle-text {
   color: var(--standard-white);
+  margin: var(--padding-master);
 }
 
 #main-content-container {
@@ -359,14 +360,10 @@ main {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  /* gap: var(--gap-master); */
-  /* gap: calc(var(--margin-master) + var(--gap-master)); */
   gap: 1.5rem;
   background: var(--standard-black);
-  /* border-radius: var(--border-radius-master); */
-  padding: var(--gap-master);
-  /* margin-top: calc(var(--margin-master) + var(--gap-master)); */
   margin-top: 1rem;
+  padding: var(--gap-master);
 }
 
 /* PROJECT CARDS */
@@ -397,7 +394,6 @@ a {
 }
 
 a:hover {
-  /* color: var(--explosion-gold); */
   text-shadow: var(--glow);
 }
 
@@ -406,7 +402,6 @@ a:hover {
   width: var(--card-screenshot-size);
   background-color: var(--computer-grey);
   border-radius: 0.75rem;
-    /* border-radius: var(--border-radius-master); */
   margin: var(--margin-master);
   object-fit: cover;
 }
@@ -414,26 +409,18 @@ a:hover {
 .card-blurb {
   height: fit-content;
   width: fit-content;
-  /* color: var(--explosion-gold); */
-
   font-family: var(--font-text);
   font-size: var(--font-size-normal);
   margin: 1rem;
 }
 
 .card:hover {
-  /* background: var(--background-hover); */
-  border-color: var(--explosion-gold);
-    /* border-color: var(--standard-white); */
-
-  /* background: var(--background-hover-card); */
-    background: none;
-  /* color: var(--explosion-gold); */
   transition: transform 0.5s ease;
   transform: scale(1.05);
 }
 
-.card:hover a, .card:hover .card-blurb {
+.card:hover a,
+.card:hover .card-blurb {
   color: var(--explosion-gold);
 }
 
@@ -470,11 +457,24 @@ footer {
 
 /* MEDIA QUERIES */
 
+@media (min-width: 430px) {
+  #main-subtitle-div {
+    width: var(--card-size);
+    border: var(--border-style);
+    border-color: var(--standard-black);
+    border-radius: var(--border-radius-master);
+  }
+}
+
 @media (min-width: 500px) {
   :root {
     --font-size-master: 15px; /* Initial Size: 14px */
     --line-height-master: 1.5; /* Initial: 1.25 */
     --font-size-title: 2.25rem; /* Initial Size: 1.85rem */
+  }
+  .card:hover {
+    background: none;
+    border-color: var(--explosion-gold);
   }
 }
 
@@ -492,6 +492,7 @@ footer {
     --card-size: 25.5rem; /* Initial Size: 28rem */
     --img-title: 8.5rem; /* Initial Size: 7rem */
     --img-btn: 7.5rem; /* Initial Size: 6rem */
+    --main-subtitle-div-height: 5.5rem; /* Initial Size: 3rem */ 
     --card-screenshot-size: 17rem; /* Initial Size: 15rem */
     --footer-icon-size: calc(
       var(--font-size-normal) + 4rem
@@ -516,6 +517,11 @@ footer {
 @media (min-width: 800px) {
   :root {
     --font-size-title: 3rem; /* Initial Size: 1.85rem */
+    --main-subtitle-div-height: 6rem; /* Initial Size: 3rem */ 
+  }
+
+  #main-subtitle-div {
+    width: var(--container-size);
   }
 }
 
@@ -528,6 +534,12 @@ footer {
     --card-size: 28rem; /* Initial Size: 28rem */
     --img-title: 9rem; /* Initial Size: 7rem */
     --img-btn: 8rem; /* Initial Size: 6rem */
+    --main-subtitle-div-height: 7.5rem; /* Initial Size: 3rem */ 
     --card-screenshot-size: 18rem; /* Initial Size: 15rem */
   }
+
+  #main-subtitle-div {
+    border-radius: 3rem;
+  }
+
 }
