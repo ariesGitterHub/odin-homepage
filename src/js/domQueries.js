@@ -7,6 +7,7 @@ export function getElements() {
 
     // -Header Content
     headerContentContainer: document.querySelector("#header-content-container"),
+    headerTitleText: document.querySelector("#header-title-text"),
     contentImgBigDiv: document.querySelector("#content-img-big-div"),
 
     // --Big Header Images

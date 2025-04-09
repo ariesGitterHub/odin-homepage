@@ -34,13 +34,17 @@ export function createHeader() {
     id: "header-btn-container",
   });
 
-  const titleText = createElement(
+  const headerTitleDiv = createElement("div", {
+    id: "header-title-div",
+  });
+
+  const headerTitleText = createElement(
     "h1",
     {
-      id: "title-text",
+      id: "header-title-text",
       class: "special-text",
     },
-    "The Mad Muffin Man"
+    "Mad Muffin Man Studio"
   );
 
   const contentImgBigDiv = createElement("div", {
@@ -155,7 +159,9 @@ export function createHeader() {
     class: "img-small",
   });
 
-  header.append(titleText, headerContentContainer);
+  header.append(headerTitleDiv, headerContentContainer);
+
+  headerTitleDiv.append(headerTitleText);
 
   headerContentContainer.append(
     contentImgBigDiv,
@@ -180,6 +186,19 @@ export function createHeader() {
 
 export function createMain() {
   const { main } = getElements();
+
+  const mainSubtitleDiv = createElement("div", {
+    id: "main-subtitle-div",
+  });
+
+  const mainSubTitleText = createElement(
+    "h2",
+    {
+      id: "main-subtitle-text",
+      class: "special-text",
+    },
+    "My Projects"
+  );
 
   const mainContainer = createElement("div", {
     id: "main-container",
@@ -293,7 +312,8 @@ export function createMain() {
     "This is the first real app that I deployed. This was very early days in learning to code and I was in the deep end of the pool, treading water."
   );
 
-  main.append(mainContainer);
+  main.append(mainSubtitleDiv, mainContainer);
+  mainSubtitleDiv.append(mainSubTitleText);
   mainContainer.append(mainContentContainer);
   mainContentContainer.append(
     battleshipApp,

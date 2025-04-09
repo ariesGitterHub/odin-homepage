@@ -14,15 +14,25 @@ document.addEventListener("DOMContentLoaded", () => {
   createHeader();
   createMain();
   createFooter();
-  const { imgBig, imgFullMMM, imgFullMMMReverse, btnMuffin, btnMug, btnPhone } = getElements();
+  const {
+    headerTitleText,
+    imgBig,
+    imgFullMMM,
+    imgFullMMMReverse,
+    btnMuffin,
+    btnMug,
+    btnPhone,
+  } = getElements();
 
   imgBig.forEach((img) => {
     img.addEventListener("click", () => {
       mp3Click();
       if (imgFullMMMReverse.style.display !== "none") {
+        headerTitleText.style.color = "var(--circle-red)";
         flexHideIt([imgFullMMMReverse]);
         flexShowIt([imgFullMMM]);
       } else {
+        headerTitleText.style.color = "var(--mug-blue)";
         flexHideIt([imgFullMMM]);
         flexShowIt([imgFullMMMReverse]);
       }
