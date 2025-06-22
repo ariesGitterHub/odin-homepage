@@ -9,6 +9,7 @@ import svgPhone from "../assets/phoneLogo.svg";
 import svgContactEmail from "../assets/contactEmail.svg";
 import svgContactPhone from "../assets/contactPhone.svg";
 import { createCardItems } from "./functions.js";
+import screenshotResumeWizard from "../assets/screenshotResumeWizard.jpg";
 import screenshotBattleshipWWII from "../assets/screenshotBattleshipWWII.jpg";
 import screenshotWeathervane from "../assets/screenshotWeathervane.jpg";
 import screenshotTaskKing from "../assets/screenshotTaskKing.jpg";
@@ -208,6 +209,16 @@ export function createMain() {
     id: "main-content-container",
   });
 
+
+  const resumeApp = createCardItems(
+    "resume",
+    "Resumé Wizard",
+    "https://ariesgitterhub-odin-cv-application.netlify.app/",
+    screenshotResumeWizard,
+    "My return to react and vite after some time. Granted, I understand so much more than I did during the first go, but still, a definite re-learning experience."
+  );
+
+
   const battleshipApp = createCardItems(
     "battleship",
     "Battleship: WWII",
@@ -316,6 +327,7 @@ export function createMain() {
   mainSubtitleDiv.append(mainSubTitleText);
   mainContainer.append(mainContentContainer);
   mainContentContainer.append(
+    resumeApp,
     battleshipApp,
     weatherApp,
     todoApp,
