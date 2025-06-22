@@ -209,6 +209,7 @@ export function createMain() {
     id: "main-content-container",
   });
 
+  // ADD NEW PROJECTS HERE
 
   const resumeApp = createCardItems(
     "resume",
