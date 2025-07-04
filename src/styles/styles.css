@@ -531,7 +531,7 @@ footer {
     --font-size-subtitle: 2rem; /* Initial Size: 1.5rem */
     --content-size: 28rem; /* Initial Size: 22rem */
     --container-size: 32rem; /* Initial Size: 28rem */
-    --card-size: 28rem; /* Initial Size: 28rem */
+    --card-size: 30rem; /* Initial Size: 28rem, changed to 30rem to fit "Mystical Memory Game on 2025.07.04*/
     --img-title: 9rem; /* Initial Size: 7rem */
     --img-btn: 8rem; /* Initial Size: 6rem */
     --main-subtitle-div-height: 7.5rem; /* Initial Size: 3rem */ 

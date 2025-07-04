@@ -9,6 +9,7 @@ import svgPhone from "../assets/phoneLogo.svg";
 import svgContactEmail from "../assets/contactEmail.svg";
 import svgContactPhone from "../assets/contactPhone.svg";
 import { createCardItems } from "./functions.js";
+import screenshotMysticalMemoryGame from "../assets/screenshotMysticalMemoryGame.jpg";
 import screenshotResumeWizard from "../assets/screenshotResumeWizard.jpg";
 import screenshotBattleshipWWII from "../assets/screenshotBattleshipWWII.jpg";
 import screenshotWeathervane from "../assets/screenshotWeathervane.jpg";
@@ -211,6 +212,14 @@ export function createMain() {
 
   // ADD NEW PROJECTS HERE
 
+  const memoryApp = createCardItems(
+    "memory",
+    "Mystical Memory Game",
+    "https://ariesgitterhub-odin-memory-card.netlify.app/",
+    screenshotMysticalMemoryGame,
+    "Another great react/vite project, but this time with useEffect and useMemo hooks (and the added fun of creating an external API after not finding what I wanted elsewhere)."
+  );
+
   const resumeApp = createCardItems(
     "resume",
     "Resumé Wizard",
@@ -328,6 +337,7 @@ export function createMain() {
   mainSubtitleDiv.append(mainSubTitleText);
   mainContainer.append(mainContentContainer);
   mainContentContainer.append(
+    memoryApp,
     resumeApp,
     battleshipApp,
     weatherApp,
