@@ -217,7 +217,7 @@ export function createMain() {
     "Mystical Memory Game",
     "https://ariesgitterhub-odin-memory-card.netlify.app/",
     screenshotMysticalMemoryGame,
-    "Another great react/vite project, but this time with useEffect and useMemo hooks (and the added fun of creating an external API after not finding what I wanted elsewhere)."
+    "Another great react/vite project, but this time with the useEffect hook (and the added fun of creating an external API after not finding what I wanted elsewhere)."
   );
 
   const resumeApp = createCardItems(
