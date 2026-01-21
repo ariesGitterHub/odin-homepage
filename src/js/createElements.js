@@ -9,6 +9,8 @@ import svgPhone from "../assets/phoneLogo.svg";
 import svgContactEmail from "../assets/contactEmail.svg";
 import svgContactPhone from "../assets/contactPhone.svg";
 import { createCardItems } from "./functions.js";
+import screenshotFunzyOnesiesInventoryApp from "../assets/screenshotFunzyOnesiesInventoryApp.jpg";
+import screenshotFunzyOnesies from "../assets/screenshotFunzyOnesies.jpg";
 import screenshotMysticalMemoryGame from "../assets/screenshotMysticalMemoryGame.jpg";
 import screenshotResumeWizard from "../assets/screenshotResumeWizard.jpg";
 import screenshotBattleshipWWII from "../assets/screenshotBattleshipWWII.jpg";
@@ -46,7 +48,7 @@ export function createHeader() {
       id: "header-title-text",
       class: "special-text",
     },
-    "Mad Muffin Man Studio"
+    "Mad Muffin Man Studio",
   );
 
   const contentImgBigDiv = createElement("div", {
@@ -168,7 +170,7 @@ export function createHeader() {
   headerContentContainer.append(
     contentImgBigDiv,
     contentTextTitleDiv,
-    headerBtnContainer
+    headerBtnContainer,
   );
   contentImgBigDiv.append(imgFullMMMReverse, imgFullMMM);
   contentTextTitleDiv.append(contentTitleDiv, contentText, contactInfoDiv);
@@ -177,7 +179,7 @@ export function createHeader() {
     imgContactEmail,
     contactEmail,
     imgContactPhone,
-    contactPhone
+    contactPhone,
   );
   headerBtnContainer.append(btnMuffin, btnMug, btnPhone);
 
@@ -199,7 +201,7 @@ export function createMain() {
       id: "main-subtitle-text",
       class: "special-text",
     },
-    "My Projects"
+    "My Projects",
   );
 
   const mainContainer = createElement("div", {
@@ -211,13 +213,28 @@ export function createMain() {
   });
 
   // ADD NEW PROJECTS HERE
+  const inventoryApp = createCardItems(
+    "inventory",
+    "Inventory Manager",
+    "https://odin-inventory-application-khiz.onrender.com/products",
+    screenshotFunzyOnesiesInventoryApp,
+    "My first real server/database deployment using Node, Express, and bunch of other new packages. This app represents the faux back-end inventory to the Funzy Onesies! store project.",
+  );
+
+  const shoppingApp = createCardItems(
+    "shopping",
+    "Funzy Onesies!",
+    "https://ariesgitterhub-odin-shopping-cart.netlify.app/",
+    screenshotFunzyOnesies,
+    "This shopping cart app uses react-router-dom, createContext to share data across components, and my first foray into testing with React/Vite.",
+  );
 
   const memoryApp = createCardItems(
     "memory",
     "Mystical Memory Game",
     "https://ariesgitterhub-odin-memory-card.netlify.app/",
     screenshotMysticalMemoryGame,
-    "Another great react/vite project, but this time with the useEffect hook (and the added fun of creating an external API after not finding what I wanted elsewhere)."
+    "Another great react/vite project, but this time with the useEffect hook (and the added fun of creating an external API after not finding what I wanted elsewhere).",
   );
 
   const resumeApp = createCardItems(
@@ -225,16 +242,15 @@ export function createMain() {
     "Resumé Wizard",
     "https://ariesgitterhub-odin-cv-application.netlify.app/",
     screenshotResumeWizard,
-    "My return to react and vite after some time. Granted, I understand so much more than I did during the first go, but still, a definite re-learning experience."
+    "My return to react and vite after some time. Granted, I understand so much more than I did during the first go, but still, a definite re-learning experience.",
   );
-
 
   const battleshipApp = createCardItems(
     "battleship",
     "Battleship: WWII",
     "https://ariesgitterhub.github.io/odin-battleship/",
     screenshotBattleshipWWII,
-    "This is my own variant of the famous electronic board game, Battleship. This code was my first foray into Test Driven Development (TDD)."
+    "This is my own variant of the famous electronic board game, Battleship. This code was my first foray into Test Driven Development (TDD).",
   );
 
   const weatherApp = createCardItems(
@@ -242,7 +258,7 @@ export function createMain() {
     "Weathervane",
     "https://ariesgitterhub.github.io/odin-weather-app/",
     screenshotWeathervane,
-    "My first use of an API call set up, this weather app utilizes worldwide weather data from the Visual Crossing API. It is also an app that I use daily."
+    "My first use of an API call set up, this weather app utilizes worldwide weather data from the Visual Crossing API. It is also an app that I use daily.",
   );
 
   const todoApp = createCardItems(
@@ -250,7 +266,7 @@ export function createMain() {
     "Task King",
     "https://ariesgitterhub.github.io/odin-todo-list/",
     screenshotTaskKing,
-    "This to-do list application incorporates the use of class generated objects, localStorage, and the date-fns library."
+    "This to-do list application incorporates the use of class generated objects, localStorage, and the date-fns library.",
   );
 
   const restaurantApp = createCardItems(
@@ -258,7 +274,7 @@ export function createMain() {
     "The Hidden Garden",
     "https://ariesgitterhub.github.io/odin-restaurant-page/",
     screenshotTheHiddenGarden,
-    "This restaurant site is for a fictional bookstore cafe; it was my introduction to webpack, npm, and ES6 modules."
+    "This restaurant site is for a fictional bookstore cafe; it was my introduction to webpack, npm, and ES6 modules.",
   );
 
   const tictactoeApp = createCardItems(
@@ -266,7 +282,7 @@ export function createMain() {
     "Tic-Tac-Zodiac",
     "https://ariesgitterhub.github.io/odin-tic-tac-toe/",
     screenshotTicTacZodiac,
-    "A simple game that served as my intro to factory functions, closures, and new ideas on building code from the inside out."
+    "A simple game that served as my intro to factory functions, closures, and new ideas on building code from the inside out.",
   );
 
   const libraryApp = createCardItems(
@@ -274,7 +290,7 @@ export function createMain() {
     "MyReadList",
     "https://ariesgitterhub.github.io/odin-book-library/",
     screenshotMyReadList,
-    "This library app opened my brain up the world of the object design pattern, as well as the use of a cool technique: the data-attribute."
+    "This library app opened my brain up the world of the object design pattern, as well as the use of a cool technique: the data-attribute.",
   );
 
   const dashboardApp = createCardItems(
@@ -282,7 +298,7 @@ export function createMain() {
     "myDashboard",
     "https://ariesgitterhub.github.io/odin-admin-dashboard/",
     screenshotMyDashboard,
-    "This project, showing a mock-up of an admin-dashboard, highlights early lessons on the CSS essentials of flex and grid."
+    "This project, showing a mock-up of an admin-dashboard, highlights early lessons on the CSS essentials of flex and grid.",
   );
 
   const signupApp = createCardItems(
@@ -290,7 +306,7 @@ export function createMain() {
     "Lecture Event",
     "https://ariesgitterhub.github.io/odin-sign-up-form/",
     screenshotMULectureEvent,
-    "This mock-up form for a fictional lecture event employs form field basics and controls, as well as front-end input validation."
+    "This mock-up form for a fictional lecture event employs form field basics and controls, as well as front-end input validation.",
   );
 
   const calculatorApp = createCardItems(
@@ -298,7 +314,7 @@ export function createMain() {
     "Calculator",
     "https://ariesgitterhub.github.io/odin-calculator/",
     screenshotCalculator,
-    "A not-so-basic calculator that has buttons for getting Roman Numerals, factorials, percents in decimals, and one button for answering 'the meaning of life.'"
+    "A not-so-basic calculator that has buttons for getting Roman Numerals, factorials, percents in decimals, and one button for answering 'the meaning of life.'",
   );
 
   const easApp = createCardItems(
@@ -306,7 +322,7 @@ export function createMain() {
     "Etch-a-Dungeon",
     "https://ariesgitterhub.github.io/odin-etch-a-sketch/",
     screenshotEtchADungeon,
-    "An early project that was meant to be a simple Etch-A-Sketch demo; it morphed into a working dungeon-building app. Best viewed on desktop or laptop with a mouse."
+    "An early project that was meant to be a simple Etch-A-Sketch demo; it morphed into a working dungeon-building app. Best viewed on desktop or laptop with a mouse.",
   );
 
   const rpsApp = createCardItems(
@@ -314,7 +330,7 @@ export function createMain() {
     "Wu-Xing Roshambo",
     "https://ariesgitterhub.github.io/odin-rock-paper-scissors/",
     screenshotWuXingRoshambo,
-    "This is my take on the game 'Rock, Paper, Scissors.' This was my first time coding something that required game logic to determine outcomes. Not mobile ready."
+    "This is my take on the game 'Rock, Paper, Scissors.' This was my first time coding something that required game logic to determine outcomes. Not mobile ready.",
   );
 
   const ssmApp = createCardItems(
@@ -322,7 +338,7 @@ export function createMain() {
     "Stupid Sound Machine",
     "https://scintillating-muffin-134894.netlify.app/",
     screenshotStupidSoundMachine,
-    "An early app that I created for fun, which also has a lot of humorous 'local pub conversation utility.' Fear the screaming goat!"
+    "An early app that I created for fun, which also has a lot of humorous 'local pub conversation utility.' Fear the screaming goat!",
   );
 
   const ssqgApp = createCardItems(
@@ -330,13 +346,15 @@ export function createMain() {
     "Quote Generator",
     "https://whimsical-banoffee-187bf5.netlify.app/",
     screenshotStarSignQuoteGenerator,
-    "This is the first real app that I deployed. This was very early days in learning to code and I was in the deep end of the pool, treading water."
+    "This is the first real app that I deployed. This was very early days in learning to code and I was in the deep end of the pool, treading water.",
   );
 
   main.append(mainSubtitleDiv, mainContainer);
   mainSubtitleDiv.append(mainSubTitleText);
   mainContainer.append(mainContentContainer);
   mainContentContainer.append(
+    inventoryApp,
+    shoppingApp,
     memoryApp,
     resumeApp,
     battleshipApp,
@@ -351,7 +369,7 @@ export function createMain() {
     easApp,
     rpsApp,
     ssmApp,
-    ssqgApp
+    ssqgApp,
   );
 }
 
@@ -373,7 +391,7 @@ export function createFooter() {
     {
       id: "footer-text",
     },
-    "A Mad Muffin Man Design, © 2025"
+    "A Mad Muffin Man Design, © 2025",
   );
 
   footer.append(footerContentContainer);
