@@ -9,6 +9,7 @@ import svgPhone from "../assets/phoneLogo.svg";
 import svgContactEmail from "../assets/contactEmail.svg";
 import svgContactPhone from "../assets/contactPhone.svg";
 import { createCardItems } from "./functions.js";
+import screenshotMessageBoardApp from "../assets/screenshotMessageBoard.jpg"
 import screenshotFunzyOnesiesInventoryApp from "../assets/screenshotFunzyOnesiesInventoryApp.jpg";
 import screenshotFunzyOnesies from "../assets/screenshotFunzyOnesies.jpg";
 import screenshotMysticalMemoryGame from "../assets/screenshotMysticalMemoryGame.jpg";
@@ -213,6 +214,14 @@ export function createMain() {
   });
 
   // ADD NEW PROJECTS HERE
+  const messageBoardApp = createCardItems(
+    "message",
+    "Private Message Board",
+    "https://can-message-board.org/",
+    screenshotMessageBoardApp,
+    "My first production level app using Node, Express, and much more. This app will be used by a small neighborhood organization in the real world. It's exciting and scary all at once.",
+  );
+
   const inventoryApp = createCardItems(
     "inventory",
     "Inventory Manager",
@@ -353,6 +362,7 @@ export function createMain() {
   mainSubtitleDiv.append(mainSubTitleText);
   mainContainer.append(mainContentContainer);
   mainContentContainer.append(
+    messageBoardApp,
     inventoryApp,
     shoppingApp,
     memoryApp,
