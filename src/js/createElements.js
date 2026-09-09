@@ -9,6 +9,7 @@ import svgPhone from "../assets/phoneLogo.svg";
 import svgContactEmail from "../assets/contactEmail.svg";
 import svgContactPhone from "../assets/contactPhone.svg";
 import { createCardItems } from "./functions.js";
+import screenshotFileKeeper from "../assets/screenshotFileKeeper.jpg"
 import screenshotMessageBoardApp from "../assets/screenshotMessageBoard.jpg"
 import screenshotFunzyOnesiesInventoryApp from "../assets/screenshotFunzyOnesiesInventoryApp.jpg";
 import screenshotFunzyOnesies from "../assets/screenshotFunzyOnesies.jpg";
@@ -214,6 +215,14 @@ export function createMain() {
   });
 
   // ADD NEW PROJECTS HERE
+  const fileKeeperUploaderApp = createCardItems(
+    "message",
+    "File Keeper",
+    "https://odin-file-uploader-3lfp.onrender.com/app/",
+    screenshotFileKeeper,
+    "This project reinforced all the things learned from the prior project. It also added the use of Prisma ORM and multer to the mix. Working with Prisma was pretty enjoyable compared to raw SQL!",
+  );
+  
   const messageBoardApp = createCardItems(
     "message",
     "Private Message Board",
@@ -362,6 +371,7 @@ export function createMain() {
   mainSubtitleDiv.append(mainSubTitleText);
   mainContainer.append(mainContentContainer);
   mainContentContainer.append(
+    fileKeeperUploaderApp,
     messageBoardApp,
     inventoryApp,
     shoppingApp,
