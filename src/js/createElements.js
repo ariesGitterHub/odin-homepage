@@ -9,6 +9,7 @@ import svgPhone from "../assets/phoneLogo.svg";
 import svgContactEmail from "../assets/contactEmail.svg";
 import svgContactPhone from "../assets/contactPhone.svg";
 import { createCardItems } from "./functions.js";
+import screenshotBloggieApiProject from "../assets/screenshotBloggieApiProject.jpg";
 import screenshotFileKeeper from "../assets/screenshotFileKeeper.jpg"
 import screenshotMessageBoardApp from "../assets/screenshotMessageBoard.jpg"
 import screenshotFunzyOnesiesInventoryApp from "../assets/screenshotFunzyOnesiesInventoryApp.jpg";
@@ -215,6 +216,14 @@ export function createMain() {
   });
 
   // ADD NEW PROJECTS HERE
+  const bloggieApiProjectApp = createCardItems(
+    "message",
+    "Bloggie API",
+    "https://odin-blog-reader.netlify.app/",
+    screenshotBloggieApiProject,
+    "This project had me create two static front-ends, one for blog readers, and one for blog writers, and, on top of that, an API-only backend to connect it all together.",
+  );
+
   const fileKeeperUploaderApp = createCardItems(
     "message",
     "File Keeper",
@@ -371,6 +380,7 @@ export function createMain() {
   mainSubtitleDiv.append(mainSubTitleText);
   mainContainer.append(mainContentContainer);
   mainContentContainer.append(
+    bloggieApiProjectApp,
     fileKeeperUploaderApp,
     messageBoardApp,
     inventoryApp,
